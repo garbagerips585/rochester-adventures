@@ -1165,15 +1165,19 @@ details[open] summary::after{content:"\2212"}
     if(i===1&&'filter' in g)g.filter='hue-rotate(18deg) saturate(1.1)';
     if(i===2&&'filter' in g)g.filter='hue-rotate(-12deg) brightness(.92)';
     g.fillText(ch,SZ,SZ+6);return o;});
-  var N=W<600?9:W<1024?14:20;
-  function mk(top){return{x:Math.random()*W,y:top?-60:Math.random()*H,s:(W<600?.3:.36)+Math.random()*.38,r:Math.random()*6.28,vr:(Math.random()-.5)*.025,vy:.45+Math.random()*.8,sw:Math.random()*6.28,swa:.5+Math.random()*1.3,img:sprites[Math.random()*sprites.length|0],o:.6+Math.random()*.3,flip:Math.random()*6.28,vf:.01+Math.random()*.02}}
-  for(var i=0;i<N;i++)leaves.push(mk(false));
+  function mk(delay){return{x:Math.random()*W,y:-60-delay,s:(W<600?.3:.36)+Math.random()*.38,r:Math.random()*6.28,vr:(Math.random()-.5)*.025,vy:.45+Math.random()*.8,sw:Math.random()*6.28,swa:.5+Math.random()*1.3,img:sprites[Math.random()*sprites.length|0],o:.6+Math.random()*.3,flip:Math.random()*6.28,vf:.01+Math.random()*.02}}
+  // gusts: a flurry on load, then a small gust now and then, never constant
+  function gust(n){for(var i=0;i<n;i++)leaves.push(mk(Math.random()*H*1.2))}
+  gust(W<600?12:20);
+  function later(){setTimeout(function(){gust(W<600?5:8);later()},45000+Math.random()*40000)}
+  later();
   var last=0;
   function draw(t){
     var dt=Math.min(32,t-last)/16;last=t;ctx.clearRect(0,0,W,H);
-    for(var i=0;i<leaves.length;i++){var l=leaves[i];
+    for(var i=leaves.length-1;i>=0;i--){var l=leaves[i];
       l.y+=l.vy*dt;l.sw+=.018*dt;l.x+=Math.sin(l.sw)*l.swa*.45*dt;l.r+=l.vr*dt;l.flip+=l.vf*dt;
-      if(l.y>H+60||l.x<-80||l.x>W+80)leaves[i]=l=mk(true);
+      if(l.y>H+60||l.x<-80||l.x>W+80){leaves.splice(i,1);continue}
+      if(l.y<-60)continue;
       ctx.save();ctx.translate(l.x,l.y);ctx.rotate(l.r);ctx.scale(l.s*(0.55+0.45*Math.abs(Math.cos(l.flip))),l.s);
       ctx.globalAlpha=l.o;ctx.drawImage(l.img,-SZ,-SZ);ctx.restore();}
     requestAnimationFrame(draw);
