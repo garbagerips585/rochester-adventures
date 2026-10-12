@@ -1,0 +1,832 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Cotter's Rochester, NY Adventures</title>
+<meta name="description" content="A three-day fall guide to Rochester, the Finger Lakes and Letchworth for our visitors, Oct 17 to 19, 2026.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23C8471B%22%20d%3D%22M12%201.5c3.5%202%206.5%206%205.5%2011.5-1%204.5-3.5%206.5-5.5%207.5-2-1-4.5-3-5.5-7.5C5.5%207.5%208.5%203.5%2012%201.5zm0%203.2v14.8%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,60;1,9..144,400..600,60&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FFF6E8; --paper-2:#FBE9CF; --bark:#2B1A12; --ink:#4A3327;
+  --maple:#8E1B16; --ember:#C8471B; --gold:#E3A235; --moss:#5C6B3C;
+  --card:#FFFDF8; --line:rgba(74,51,39,.14);
+  --radius:14px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--bark);font-family:"Nunito Sans",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.55;overflow-x:hidden}
+#leaves{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:6}
+.page{position:relative;z-index:1}
+a{color:var(--maple)}
+h1,h2,h3,h4{font-family:"Fraunces","Iowan Old Style",Georgia,serif;font-weight:600;line-height:1.12;margin:0;letter-spacing:-.01em}
+h2{font-size:1.9rem;color:var(--maple);margin:0 0 .35rem}
+h3{font-size:1.25rem;margin:1.6rem 0 .6rem;color:var(--bark)}
+h4{font-size:1.18rem;margin:.1rem 0 .25rem}
+h4 span{font:600 .72rem "Nunito Sans",sans-serif;color:var(--card);background:var(--moss);border-radius:999px;padding:.15rem .55rem;vertical-align:middle;margin-left:.4rem;letter-spacing:.02em}
+p{margin:.3rem 0}
+.meta{color:var(--ink);font-size:.93rem}
+.lead{font-size:1.05rem;color:var(--ink);max-width:62ch}
+
+/* hero */
+.hero{position:relative;padding:3.2rem 1.1rem 2.2rem;color:#FFF3E2;background:
+  radial-gradient(120% 90% at 10% 0%,#B2411D 0%,rgba(178,65,29,0) 55%),
+  radial-gradient(90% 70% at 100% 100%,#E3A235 0%,rgba(227,162,53,0) 55%),
+  linear-gradient(170deg,#3E0F12 0%,#7A1A15 55%,#A8361A 100%);
+  overflow:hidden}
+.hero .leaf-mark{width:54px;height:54px;fill:var(--gold);stroke:#7A1A15;stroke-width:1.2;margin-bottom:.8rem;filter:drop-shadow(0 4px 10px rgba(0,0,0,.25))}
+.hero h1{font-size:clamp(2.3rem,9vw,4.2rem);font-weight:500;font-variation-settings:"opsz" 144,"SOFT" 60;line-height:1.02;max-width:12ch}
+.hero h1 em{font-style:italic;font-weight:400}
+.hero .dates{margin:1rem 0 .3rem;font-size:1.05rem;opacity:.95}
+.hero .welcome{font-size:1.05rem;max-width:40ch;opacity:.92;margin-top:.6rem}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:28px;background:var(--paper);clip-path:polygon(0 60%,8% 20%,17% 70%,27% 10%,36% 60%,47% 25%,56% 75%,66% 15%,75% 55%,86% 10%,94% 60%,100% 30%,100% 100%,0 100%)}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:5;background:rgba(255,246,232,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav ul{list-style:none;margin:0;padding:.55rem .8rem;display:flex;gap:.45rem;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.nav ul::-webkit-scrollbar{display:none}
+.nav a{white-space:nowrap;text-decoration:none;color:var(--bark);font-weight:700;font-size:.9rem;padding:.42rem .8rem;border-radius:999px;border:1.5px solid var(--line);background:var(--card)}
+.nav a.active{background:var(--maple);border-color:var(--maple);color:#fff}
+
+section{padding:2.2rem 1rem 0;max-width:720px;margin:0 auto;scroll-margin-top:3.4rem}
+section:last-of-type{padding-bottom:3rem}
+
+/* day summary */
+.days{display:grid;gap:.8rem;margin:1.2rem 0 0}
+.daycard{display:flex;gap:.9rem;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:.8rem .9rem;text-decoration:none;color:inherit}
+.daycard .dn{font-family:"Fraunces",serif;font-size:2rem;font-weight:500;color:var(--ember);line-height:1;min-width:2.3rem;text-align:center}
+.daycard .dn small{display:block;font:700 .62rem "Nunito Sans",sans-serif;color:var(--ink);letter-spacing:.06em;margin-top:.15rem}
+.daycard h4{margin:0}
+.daycard p{margin:.1rem 0 0;font-size:.92rem;color:var(--ink)}
+.weather{display:flex;gap:.6rem;flex-wrap:wrap;margin:1rem 0 0}
+.weather div{background:var(--paper-2);border-radius:10px;padding:.55rem .75rem;font-size:.9rem;flex:1 1 30%}
+.weather b{display:block;font-family:"Fraunces",serif;font-size:1.2rem;font-weight:500}
+.todo{list-style:none;padding:0;margin:.8rem 0 0}
+.todo li{padding:.45rem 0 .45rem 1.7rem;position:relative;border-top:1px solid var(--line)}
+.todo li::before{content:"";position:absolute;left:0;top:.72rem;width:.9rem;height:.9rem;border:2px solid var(--gold);border-radius:4px}
+
+/* timeline */
+.timeline{list-style:none;margin:1rem 0 0;padding:0;position:relative}
+.timeline::before{content:"";position:absolute;left:3.55rem;top:.4rem;bottom:.4rem;width:2px;background:linear-gradient(var(--gold),var(--ember))}
+.stop{display:grid;grid-template-columns:3rem 1fr;gap:1.1rem;margin:0 0 1.2rem}
+.when{font:700 .86rem "Nunito Sans",sans-serif;color:var(--ember);padding-top:.9rem;text-align:right;position:relative}
+.when::after{content:"";position:absolute;right:-.95rem;top:1.15rem;width:.7rem;height:.7rem;border-radius:50%;background:var(--paper);border:2.5px solid var(--ember)}
+.optional .when::after{border-color:var(--moss)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:0 .95rem .9rem;box-shadow:0 1px 0 rgba(43,26,18,.04)}
+.card h4{margin-top:.8rem}
+.photo{position:relative;margin:0 -.95rem .2rem;aspect-ratio:16/9;overflow:hidden;background:var(--paper-2);border-radius:var(--radius) var(--radius) 0 0}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.ph-fallback{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F3D9A4,#E7B46A)}
+.ph-fallback svg{width:42px;height:42px;fill:rgba(142,27,22,.55)}
+.credit{position:absolute;right:.4rem;bottom:.3rem;font-size:.62rem;color:#fff;text-decoration:none;opacity:.75;background:rgba(0,0,0,.35);padding:.1rem .4rem;border-radius:4px}
+.links{margin-top:.55rem;display:flex;flex-wrap:wrap;gap:.4rem}
+.links a{text-decoration:none;font-weight:700;font-size:.86rem;color:var(--maple);border:1.5px solid rgba(142,27,22,.35);border-radius:999px;padding:.28rem .7rem}
+.links a:active{background:var(--maple);color:#fff}
+.card.wide{padding-top:0;margin-bottom:1rem}
+
+/* tiles */
+.grid{display:grid;gap:.9rem;margin-top:.8rem}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:0 .9rem .8rem}
+.tile-photo{margin:0 -.9rem .4rem;aspect-ratio:16/8}
+.tile h4{margin-top:.4rem}
+.stack{margin-top:.8rem}
+
+/* rows */
+.rows{list-style:none;margin:.6rem 0 0;padding:0}
+.row{display:grid;grid-template-columns:88px 1fr;gap:.85rem;padding:.85rem 0;border-top:1px solid var(--line)}
+.row:first-child{border-top:0}
+.thumb{width:88px;height:88px;border-radius:12px;overflow:hidden;background:var(--paper-2);position:relative;align-self:start}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb.ph-fallback svg{width:30px;height:30px}
+.thumb .credit{display:none}
+.row h4{font-size:1.08rem}
+.row p{font-size:.95rem}
+.row .links{margin-top:.4rem}
+.row .links a{padding:.22rem .6rem;font-size:.8rem}
+
+details{border-top:1px solid var(--line);margin-top:.6rem}
+details summary{cursor:pointer;font-weight:700;padding:.8rem 0;list-style:none;display:flex;justify-content:space-between;align-items:center}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";font-family:"Fraunces",serif;font-size:1.5rem;color:var(--ember)}
+details[open] summary::after{content:"\2212"}
+.note{background:var(--paper-2);border-left:4px solid var(--gold);padding:.7rem .9rem;border-radius:0 10px 10px 0;font-size:.95rem;margin:.8rem 0}
+.foot{padding:2rem 1rem 3rem;text-align:center;color:var(--ink);font-size:.88rem;max-width:720px;margin:0 auto}
+.foot svg{width:28px;height:28px;fill:var(--ember);stroke:var(--bark);stroke-width:1}
+
+@media (min-width:600px){
+  .days{grid-template-columns:repeat(3,1fr)}
+  .daycard{flex-direction:column;align-items:flex-start}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .hero{padding:4.5rem 2rem 3rem}
+  section{padding-left:1.5rem;padding-right:1.5rem}
+}
+@media (min-width:900px){
+  .hero > div{max-width:860px;margin:0 auto}
+  section{max-width:860px}
+  .stop{grid-template-columns:4rem 1fr}
+  .photo{aspect-ratio:21/9}
+  .timeline::before{left:4.55rem}
+  .when{font-size:.95rem}
+}
+@media (prefers-reduced-motion:reduce){#leaves{display:none}}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+</style></head><body>
+<canvas id="leaves" aria-hidden="true"></canvas><div class="page">
+<header class="hero"><div>
+<svg class="leaf-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5c3.5 2 6.5 6 5.5 11.5-1 4.5-3.5 6.5-5.5 7.5-2-1-4.5-3-5.5-7.5C5.5 7.5 8.5 3.5 12 1.5zm0 3.2v14.8"/></svg>
+<h1>The Cotter's <em>Rochester, NY</em> Adventures</h1>
+<p class="dates">Saturday Oct 17 to Monday Oct 19, 2026</p>
+<p class="welcome">Three days of peak fall color, waterfalls, wineries and the food we love. Here is what we have in mind; scroll through and tell us what sounds best.</p>
+</div></header>
+<nav class="nav" aria-label="Sections"><ul>
+<li><a href="#start">Start here</a></li>
+<li><a href="#sat">Saturday</a></li>
+<li><a href="#sun">Sunday</a></li>
+<li><a href="#mon">Monday</a></li>
+<li><a href="#leaves-sec">Leaf drives</a></li>
+<li><a href="#food">Food</a></li>
+<li><a href="#epic">Epic</a></li>
+<li><a href="#rain">Rainy day</a></li>
+<li><a href="#know">Good to know</a></li>
+</ul></nav>
+<section id="start"><h2>Start here</h2>
+<p class="lead">The leaves in the hills south of Rochester are expected to hit peak exactly this weekend. The plan: a city day Saturday while it is cold, the Canandaigua Lake wine loop Sunday, and Letchworth, the Grand Canyon of the East, on Monday when it is free, empty and the warmest day. Everything is a suggestion; the Epic and Rainy day sections have the swaps.</p>
+<div class="days">
+<a class="daycard" href="#sat"><div class="dn">Sat<small>Oct 17</small></div><div><h4>Rochester, the city tour</h4><p>Park Ave, Eastman Museum, High Falls, the lake, dinner out.</p></div></a>
+<a class="daycard" href="#sun"><div class="dn">Sun<small>Oct 18</small></div><div><h4>Canandaigua Lake and Naples</h4><p>Wegmans, lake overlooks, grape pie, wineries, chairlift, Bills game.</p></div></a>
+<a class="daycard" href="#mon"><div class="dn">Mon<small>Oct 19</small></div><div><h4>Letchworth State Park</h4><p>The gorge at peak, lunch at the Glen Iris Inn, cider donuts on the way home.</p></div></a>
+</div>
+<div class="weather"><div><b>45°</b>Sat, cold and bright, windy</div><div><b>53°</b>Sun, dry</div><div><b>64°</b>Mon, dry and mild</div></div>
+<p class="meta" style="margin-top:.6rem">Sunrise about 7:27, sunset about 6:23. Pack a warm coat for Saturday; the lake wind is real.</p>
+</section>
+<section id="sat"><h2>Saturday</h2><p class="lead">Cold and sunny, so it is the day for the neighborhoods, the museums, High Falls and Lake Ontario, with short walks between warm stops. Everything is within 20 minutes of the house.</p>
+<ol class="timeline">
+<li class="stop">
+<div class="when">8:00</div>
+<div class="card">
+<div class="photo"><img src="https://villagebakeries.com/wp-content/uploads/2023/06/Bakery-1-1500x630.jpg" alt="Breakfast: Village Bakery" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<h4>Breakfast: Village Bakery</h4>
+<p>Pastries and egg sandwiches on Culver Rd at Park Ave. Jines (7 am) or Mad Hatter (8 am) on Park Ave are the other classics.</p>
+<p class="links"><a href="https://villagebakeries.com/" target="_blank" rel="noopener">Website</a> <a href="https://villagebakeries.com/menus/" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Village%20Bakery%20%26%20Cafe%2C%20145%20Culver%20Rd%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">9:15</div>
+<div class="card">
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/East_Boulevard_and_Park_Avenue%2C_East_Avenue_District%2C_Rochester%2C_NY_%2854419050142%29.jpg/960px-East_Boulevard_and_Park_Avenue%2C_East_Avenue_District%2C_Rochester%2C_NY_%2854419050142%29.jpg" alt="Park Avenue stroll" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:East_Boulevard_and_Park_Avenue%2C_East_Avenue_District%2C_Rochester%2C_NY_%2854419050142%29.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Park Avenue stroll</h4>
+<p>Tree-lined porches and little storefronts from the 1900s. Walk Oxford St, then Park Ave for shopping: Parkleigh (gifts, opens 10) and Stever&#x27;s Candies (sponge candy, since 1946). The Harvest Walk scarecrow contest runs 11 to 5 today.</p>
+<p class="links"><a href="https://www.parkleigh.com/" target="_blank" rel="noopener">Parkleigh</a> <a href="https://steverscandy.com/" target="_blank" rel="noopener">Stever&#x27;s</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Stever%27s%20Candies%2C%20623%20Park%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">10:30</div>
+<div class="card">
+<div class="photo"><img src="https://www.eastman.org/sites/default/files/1992GEHFacade-web.jpg" alt="East Avenue to the George Eastman Museum" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<h4>East Avenue to the George Eastman Museum</h4>
+<p>Drive the mansion row the Kodak money built, then tour the Kodak founder&#x27;s 1905 house and the world&#x27;s oldest photography museum. Open 10 to 5, $23, free lot. Closed Monday, so today is the day.</p>
+<p class="links"><a href="https://www.eastman.org/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=George%20Eastman%20Museum%2C%20900%20East%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">12:15</div>
+<div class="card">
+<div class="photo"><img src="https://www.museumofplay.org/app/uploads/2024/03/Strong-Museum-drone-700.jpg" alt="Neighborhood of Play and The Strong" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<h4>Neighborhood of Play and The Strong</h4>
+<p>Where you used to live. Walk past VIDA, the free outdoor Hasbro Game Park (an 18-foot fire-breathing dragon, giant Candy Land canes) and MLK Park. Go inside The Strong if they want pinball and the World Video Game Hall of Fame: open till 8 tonight, from $25, garage $7.</p>
+<p class="links"><a href="https://www.museumofplay.org/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=The%20Strong%20National%20Museum%20of%20Play%2C%201%20Manhattan%20Square%20Dr%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">1:15</div>
+<div class="card">
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Times_Square_Building_Rochester_NY_twilight.jpg/960px-Times_Square_Building_Rochester_NY_twilight.jpg" alt="Downtown drive-by: Four Corners" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Times_Square_Building_Rochester_NY_twilight.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Downtown drive-by: Four Corners</h4>
+<p>The 1869 Powers Building, the Art Deco Times Square Building with its 42-foot aluminum Wings of Progress, Xerox Tower (tallest in town) and the copper Mercury statue on the Aqueduct Building.</p>
+<p class="links"><a href="https://en.wikipedia.org/wiki/Times_Square_Building_(Rochester,_New_York)" target="_blank" rel="noopener">About</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Times%20Square%20Building%2C%2045%20Exchange%20Blvd%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">1:30</div>
+<div class="card">
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Pont_De_Rennes_Bridge_Rochester_NY.jpg/960px-Pont_De_Rennes_Bridge_Rochester_NY.jpg" alt="High Falls and lunch at Genesee Brew House" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Pont_De_Rennes_Bridge_Rochester_NY.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>High Falls and lunch at Genesee Brew House</h4>
+<p>A 96-foot waterfall in the middle of downtown. Walk the Pont de Rennes bridge for the view, then lunch upstairs at the brewery: Cream Ale, pilot batches, a free beer museum and an enclosed terrace over the falls.</p>
+<p class="links"><a href="https://www.geneseebeer.com/brewhouse/" target="_blank" rel="noopener">Website</a> <a href="https://www.geneseebeer.com/brewhouse/" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Genesee%20Brew%20House%2C%2025%20Cataract%20St%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">3:00</div>
+<div class="card">
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Rochester_July_7-8%2C_2025_by_Pedro_Terres_02_-_Kodak_Tower.jpg/960px-Rochester_July_7-8%2C_2025_by_Pedro_Terres_02_-_Kodak_Tower.jpg" alt="Kodak Tower" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Rochester_July_7-8%2C_2025_by_Pedro_Terres_02_-_Kodak_Tower.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Kodak Tower</h4>
+<p>Two minutes from the brewery. 1914, 19 floors, George Eastman&#x27;s headquarters. No public access, but it is the skyline.</p>
+<p class="links"><a href="https://en.wikipedia.org/wiki/Kodak_Tower" target="_blank" rel="noopener">About</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Kodak%20Tower%2C%20343%20State%20St%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">3:15</div>
+<div class="card">
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Ontario_Beach_Park%2C_Rochester%2C_New_York_-_20201018_-_01.jpg/960px-Ontario_Beach_Park%2C_Rochester%2C_New_York_-_20201018_-_01.jpg" alt="Ontario Beach Park and the Charlotte pier" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Ontario_Beach_Park%2C_Rochester%2C_New_York_-_20201018_-_01.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Ontario Beach Park and the Charlotte pier</h4>
+<p>Lake Ontario looks like an ocean. Walk the pier, climb the 1822 lighthouse (tours Sat and Sun 1 to 5, $5), and get a cone at Abbott&#x27;s Frozen Custard, in its 100th season (call first, it is end of season).</p>
+<p class="links"><a href="https://www.abbottscustard.com/location/lake-avenue-rochester-ny/" target="_blank" rel="noopener">Abbott&#x27;s</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Ontario%20Beach%20Park%2C%204799%20Lake%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">4:15</div>
+<div class="card">
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Lake_Ontario_shoreline_at_Durand_Eastman_Park%2C_Rochester%2C_New_York_-_20220131_-_03.jpg/960px-Lake_Ontario_shoreline_at_Durand_Eastman_Park%2C_Rochester%2C_New_York_-_20220131_-_03.jpg" alt="Lakeshore Blvd through Durand Eastman Park" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Lake_Ontario_shoreline_at_Durand_Eastman_Park%2C_Rochester%2C_New_York_-_20220131_-_03.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Lakeshore Blvd through Durand Eastman Park</h4>
+<p>The best fall color drive inside the city: 977 acres of hills, an arboretum and the lake on your left. Roll past Seabreeze (closed for winter) and Irondequoit Bay on the way home.</p>
+<p class="links"><a href="https://www.monroecounty.gov/parks-durandeastman" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Durand%20Eastman%20Park%2C%20Lakeshore%20Blvd%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">7:00</div>
+<div class="card">
+<div class="photo"><img src="https://static.wixstatic.com/media/9fdacc_dfbd0f51a10d4928b740debaa4b790ad.jpg/v1/fill/w_980,h_496,al_c,q_85/9fdacc_dfbd0f51a10d4928b740debaa4b790ad.jpg" alt="Dinner" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<h4>Dinner</h4>
+<p>Hedges Nine Mile Point for a lakefront dinner (Saturday only), Lento for farm-to-table Italian, or Capitano near the house. Peels on Wheels pizza is Saturday-only too if you want a night in.</p>
+<p class="links"><a href="https://www.hedgesninemilepoint.com/" target="_blank" rel="noopener">Hedges</a> <a href="https://www.hedgesninemilepoint.com/menu-1" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Hedges%20Nine%20Mile%20Point%2C%201290%20Lake%20Rd%2C%20Webster%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop optional">
+<div class="when">Tonight</div>
+<div class="card">
+<div class="photo"><img src="https://images.squarespace-cdn.com/content/v1/553459d5e4b0f20e2b6084cd/1513779746730-2F6S1U1JIM1FWSG2J64G/Playhouse20171206DSC_1658.jpg" alt="Pick one if you have energy" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<h4>Pick one if you have energy <span>optional</span></h4>
+<p>The Rochester Philharmonic plays the Aretha Franklin songbook at Kodak Hall (7:30). RIT hosts Michigan State hockey downtown (7:05). Or a candlelit Spirits of the Past walk at Genesee Country Village (5 to 9, sells out).</p>
+<p class="links"><a href="https://rpo.org/events/" target="_blank" rel="noopener">RPO</a> <a href="https://www.gcv.org/spirits/" target="_blank" rel="noopener">Spirits of the Past</a></p>
+</div></li>
+</ol>
+</section>
+<section id="sun"><h2>Sunday</h2><p class="lead">The big leaf day close to home: through Brighton and Pittsford, down the west side of Canandaigua Lake to Naples at peak color, up through the Bristol Hills for the chairlift, and back for the Bills at 4:25. About 110 miles, nothing over an hour at a stretch.</p>
+<ol class="timeline">
+<li class="stop">
+<div class="when">8:30</div>
+<div class="card">
+<div class="photo"><img src="https://www.jinesrestaurant.com/images/header-1920px.jpg" alt="Breakfast on Park Ave" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<h4>Breakfast on Park Ave</h4>
+<p>Jines, the Greek-American diner everyone sends visitors to (7 to 3). Mad Hatter is the bakery-cafe option (8 to 2:30). Grab a FairPour coffee for the road.</p>
+<p class="links"><a href="https://www.jinesrestaurant.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.jinesrestaurant.com/menu.html" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Jines%20Restaurant%2C%20658%20Park%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop optional">
+<div class="when">9:30</div>
+<div class="card">
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Corbett%27s_Glen_Tunnel%2C_Brighton%2C_New_York.jpg/960px-Corbett%27s_Glen_Tunnel%2C_Brighton%2C_New_York.jpg" alt="Brighton and Twelve Corners" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Corbett%27s_Glen_Tunnel%2C_Brighton%2C_New_York.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Brighton and Twelve Corners <span>optional</span></h4>
+<p>Through the neighborhood where Tim&#x27;s sister lives. Corbett&#x27;s Glen is a 20-minute detour: walk under the old stone railroad arch to Postcard Falls.</p>
+<p class="links"><a href="https://www.townofbrighton.org/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Corbett%27s%20Glen%20Nature%20Park%2C%20Penfield%20Rd%2C%20Brighton%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">10:00</div>
+<div class="card">
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/WegmansTheFoodBarPittsfordNY.JPG/960px-WegmansTheFoodBarPittsfordNY.JPG" alt="Wegmans Pittsford" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:WegmansTheFoodBarPittsfordNY.JPG" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Wegmans Pittsford</h4>
+<p>A grocery store people drive across state lines for. The flagship has a food hall, a burger bar and a liquor store the size of a gym. Pick up a picnic for later.</p>
+<p class="links"><a href="https://www.wegmans.com/stores/pittsford-ny/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Wegmans%2C%203195%20Monroe%20Ave%2C%20Pittsford%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop optional">
+<div class="when">10:20</div>
+<div class="card">
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Schoen_Place_from_Carpenter_Park%2C_Pittsford%2C_New_York_-_20220904.jpg/960px-Schoen_Place_from_Carpenter_Park%2C_Pittsford%2C_New_York_-_20220904.jpg" alt="Schoen Place on the Erie Canal" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Schoen_Place_from_Carpenter_Park%2C_Pittsford%2C_New_York_-_20220904.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Schoen Place on the Erie Canal <span>optional</span></h4>
+<p>Twenty minutes by the water in Pittsford village: the towpath, the old grain mill, Pittsford Farms Dairy for pumpkin ice cream.</p>
+<p class="links"><a href="https://www.pittsfordfarmsdairy.com/" target="_blank" rel="noopener">Dairy</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Schoen%20Place%2C%20Pittsford%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">11:15</div>
+<div class="card">
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Sonnenberg_Mansion%2C_Canandaigua%2C_New_York.jpg/960px-Sonnenberg_Mansion%2C_Canandaigua%2C_New_York.jpg" alt="Canandaigua, then Route 21 south" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Sonnenberg_Mansion%2C_Canandaigua%2C_New_York.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Canandaigua, then Route 21 south</h4>
+<p>Kershaw Park on the lakefront, then the west-shore road down Canandaigua Lake with the hills turning on both sides. Sonnenberg Gardens and Mansion ($16, wine tasting 12 to 3) is the alternative if gardens beat lakes.</p>
+<p class="links"><a href="https://www.sonnenberg.org/" target="_blank" rel="noopener">Sonnenberg</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Kershaw%20Park%2C%20Canandaigua%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">12:00</div>
+<div class="card">
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Canandaigua_Lake_scenic.jpg/960px-Canandaigua_Lake_scenic.jpg" alt="Carolabarb Park overlook" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Canandaigua_Lake_scenic.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Carolabarb Park overlook</h4>
+<p>The famous view down the south end of Canandaigua Lake, free, with picnic tables. This is the photo.</p>
+<p class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Carolabarb%20Park%2C%20Route%2021%2C%20Naples%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">12:15</div>
+<div class="card">
+<div class="photo"><img src="https://www.josephswaysidemarket.com/images/sliders/slider01.jpg" alt="Naples: grape pie and a tasting" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<h4>Naples: grape pie and a tasting</h4>
+<p>Naples is the grape-pie town. Joseph&#x27;s Wayside Market sells Jeni&#x27;s three-time-winning pies; Inspire Moore pours Rieslings on Main St.</p>
+<p class="links"><a href="https://www.josephswaysidemarket.com/" target="_blank" rel="noopener">Joseph&#x27;s</a> <a href="https://inspiremoorewinery.com/" target="_blank" rel="noopener">Inspire Moore</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Joseph%27s%20Wayside%20Market%2C%20202%20S%20Main%20St%2C%20Naples%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">1:00</div>
+<div class="card">
+<div class="photo"><img src="https://brewandbrats.com/wp-content/uploads/2020/06/1BNBWagon.jpg" alt="Lunch: Brew &amp; Brats at Arbor Hill" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<h4>Lunch: Brew &amp; Brats at Arbor Hill</h4>
+<p>Bratwurst, Bristol Springs beer and grape tarts on Route 64, with Arbor Hill Grapery&#x27;s wine tasting next door. Open till 7 on Sunday.</p>
+<p class="links"><a href="https://brewandbrats.com/" target="_blank" rel="noopener">Website</a> <a href="https://brewandbrats.com/wp-content/uploads/2026/05/All-Summer-Menus-2026.pdf" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Brew%20%26%20Brats%20at%20Arbor%20Hill%2C%206461%20Route%2064%2C%20Naples%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">2:15</div>
+<div class="card">
+<div class="photo"><img src="https://www.bristolmountain.com/wp-content/uploads/2023/08/IMG_6943-scaled.jpg" alt="Bristol Mountain Fall Sky Ride" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<h4>Bristol Mountain Fall Sky Ride</h4>
+<p>A 15 to 20 minute chairlift to the summit over peak color, short viewpoint walks at the top, and the Morning Star Cafe at mid-station with beer and wine. Runs 11 to 4, Saturday and Sunday only. $15 if booked three days ahead, $20 after; sells out.</p>
+<p class="links"><a href="https://www.bristolmountain.com/fall-sky-rides/" target="_blank" rel="noopener">Tickets</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Bristol%20Mountain%2C%205662%20Route%2064%2C%20Canandaigua%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">3:30</div>
+<div class="card">
+<div class="photo"><img src="https://www.heronhill.com/wp-content/uploads/2025/12/Tory-Williams-Photography-0869-1-scaled.jpg" alt="Heron Hill tasting room" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<h4>Heron Hill tasting room</h4>
+<p>Five pours for $15 on a deck above Canandaigua Lake (12 to 5). Or Hazlitt Red Cat Cellars back in Naples, with a short hillside loop trail.</p>
+<p class="links"><a href="https://www.heronhill.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Heron%20Hill%20Tasting%20Room%2C%205323%20Seneca%20Point%20Rd%2C%20Canandaigua%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop optional">
+<div class="when">4:25</div>
+<div class="card">
+<div class="photo"><img src="https://craftpeak-cooler-images.imgix.net/other-half-brewing/unnamed-1.jpg" alt="Bills at the Raiders, on CBS" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<h4>Bills at the Raiders, on CBS <span>optional</span></h4>
+<p>Watch at Other Half Canandaigua (loft over the lake, giant pretzel, open till 7) or head home.</p>
+<p class="links"><a href="https://otherhalfbrewing.com/location/canandaigua/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Other%20Half%20Canandaigua%2C%2024%20Lakeshore%20Dr%2C%20Canandaigua%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">6:30</div>
+<div class="card">
+<div class="photo"><img src="https://static.wixstatic.com/media/4bef48_431d19f0730d4ffbbd9d8eaae4f7de2ff000.jpg/v1/fill/w_980,h_630,al_c,q_85/4bef48_431d19f0730d4ffbbd9d8eaae4f7de2ff000.jpg" alt="Dinner: Capitano" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<h4>Dinner: Capitano</h4>
+<p>Italian, steak and seafood ten minutes from the house (Sunday 1 to 9). Black &amp; Blue in Pittsford is the steakhouse backup; Dinosaur Bar-B-Que if they want to judge Rochester BBQ.</p>
+<p class="links"><a href="https://www.eatcapitano.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.eatcapitano.com/menus" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Capitano%20Restaurant%2C%201400%20Empire%20Blvd%2C%20Webster%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+</ol>
+<div class="note">Longer version: keep going from Naples to Keuka Lake (35 more minutes) for Route 54A, the Garrett Chapel on Bluff Point and the Hammondsport wineries, and skip the chairlift.</div>
+</section>
+<section id="mon"><h2>Monday</h2><p class="lead">Letchworth: a 17-mile gorge with 600-foot cliffs and three big waterfalls, 50 minutes from the house and at peak. Monday is the day because the $10 gate fee ends Sunday, the weekend crowds that close the gates are gone, and it is the warmest day. If you fly out Monday we do the park in the morning and skip the rest.</p>
+<ol class="timeline">
+<li class="stop">
+<div class="when">7:30</div>
+<div class="card">
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Highland_Park_Diner%2C_Rochester_New_York.jpg/960px-Highland_Park_Diner%2C_Rochester_New_York.jpg" alt="Quick breakfast, then south" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Highland_Park_Diner%2C_Rochester_New_York.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Quick breakfast, then south</h4>
+<p>Village Bakery (6:30), Jines (7) or the Highland Park Diner, a 1948 railcar with Nutella-stuffed French toast (8). Or pack DiBella&#x27;s subs for a picnic at Inspiration Point.</p>
+<p class="links"><a href="https://highlandparkdinerny.com/" target="_blank" rel="noopener">Website</a> <a href="https://highlandparkdinerny.com/food-menu" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Highland%20Park%20Diner%2C%20960%20S%20Clinton%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">8:45</div>
+<div class="card">
+<div class="photo ph-fallback" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5c3.5 2 6.5 6 5.5 11.5-1 4.5-3.5 6.5-5.5 7.5-2-1-4.5-3-5.5-7.5C5.5 7.5 8.5 3.5 12 1.5zm0 3.2v14.8"/></svg></div>
+<h4>Mt. Morris Dam overlook</h4>
+<p>The free north-end view above the deepest part of the gorge. Enter the park at Mt. Morris and drive the park road south so the overlooks come in order: Great Bend, Archery Field, Wolf Creek.</p>
+<p class="links"><a href="https://parks.ny.gov/parks/letchworth" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Mount%20Morris%20Dam%20Overlook%2C%20Mt%20Morris%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">10:30</div>
+<div class="card">
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Waterfalls_at_Letchworth_state_park.jpg/960px-Waterfalls_at_Letchworth_state_park.jpg" alt="Lower Falls and the stone footbridge" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Waterfalls_at_Letchworth_state_park.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Lower Falls and the stone footbridge</h4>
+<p>Stairs down to the bridge over the river. Twenty to thirty minutes, worth every step.</p>
+<p class="links"><a href="https://parks.ny.gov/parks/letchworth" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Lower%20Falls%2C%20Letchworth%20State%20Park%2C%20Castile%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">11:00</div>
+<div class="card">
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Middle_Falls_of_the_Genesee_River_at_Letchworth_State_Park%2C_New_York%2C_USA.jpg/960px-Middle_Falls_of_the_Genesee_River_at_Letchworth_State_Park%2C_New_York%2C_USA.jpg" alt="Inspiration Point" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Middle_Falls_of_the_Genesee_River_at_Letchworth_State_Park%2C_New_York%2C_USA.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Inspiration Point</h4>
+<p>The postcard: Middle and Upper Falls down the gorge with 600-foot cliffs on both sides. Peak color this weekend.</p>
+<p class="links"><a href="https://parks.ny.gov/parks/letchworth" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Inspiration%20Point%2C%20Letchworth%20State%20Park%2C%20Castile%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">11:30</div>
+<div class="card">
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Glen_Iris_Inn.jpg/960px-Glen_Iris_Inn.jpg" alt="Lunch at the Glen Iris Inn" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Glen_Iris_Inn.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Lunch at the Glen Iris Inn</h4>
+<p>William Pryor Letchworth&#x27;s home beside Middle Falls; the dining room windows look straight at the water. Reserve on Tock. Lower Falls Restaurant is the casual option in the park.</p>
+<p class="links"><a href="https://www.glenirisinn.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.glenirisinn.com/dining/" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Glen%20Iris%20Inn%2C%20Letchworth%20State%20Park%2C%20Castile%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">1:00</div>
+<div class="card">
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Stony_Brook_State_Park_waterfalls.jpg/960px-Stony_Brook_State_Park_waterfalls.jpg" alt="Middle Falls, Upper Falls and the railroad arch" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Stony_Brook_State_Park_waterfalls.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Middle Falls, Upper Falls and the railroad arch</h4>
+<p>The last walk: Upper Falls under the Genesee Arch bridge. Optional 25-minute detour south to Stony Brook State Park (three waterfalls, free) on the way out.</p>
+<p class="links"><a href="https://parks.ny.gov/parks/stonybrook" target="_blank" rel="noopener">Stony Brook</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Upper%20Falls%2C%20Letchworth%20State%20Park%2C%20Castile%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">2:45</div>
+<div class="card">
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/1874_Gate_House.jpg/960px-1874_Gate_House.jpg" alt="Mt. Hope Cemetery" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:1874_Gate_House.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Mt. Hope Cemetery</h4>
+<p>On the way home off I-390. America&#x27;s first municipal Victorian cemetery (1838), 196 hilly acres at full color, and the graves of Susan B. Anthony and Frederick Douglass. Free, drive the lanes; gates close at 5.</p>
+<p class="links"><a href="https://www.cityofrochester.gov/visitmounthope" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Mount%20Hope%20Cemetery%2C%201133%20Mt%20Hope%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">3:30</div>
+<div class="card">
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/COBBS_HILL_RESERVOIR.jpg/960px-COBBS_HILL_RESERVOIR.jpg" alt="Highland Park and Cobbs Hill" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:COBBS_HILL_RESERVOIR.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Highland Park and Cobbs Hill</h4>
+<p>The Olmsted arboretum and Lamberton Conservatory ($4), the Sunken Garden behind Warner Castle, then the skyline from the Cobbs Hill reservoir.</p>
+<p class="links"><a href="https://www.monroecounty.gov/parks-highland" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Cobbs%20Hill%20Reservoir%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">4:30</div>
+<div class="card">
+<div class="photo"><img src="https://schuttsapplemill.com/wp-content/uploads/2022/07/IMG_0947-scaled-1-e1649160808555.jpg" alt="Schutt&#x27;s Apple Mill" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<h4>Schutt&#x27;s Apple Mill</h4>
+<p>Ten minutes from the house: fried cakes (cider donuts), fresh-pressed cider, the Apple Frost shake and a hard-cider tasting room. Open till 6.</p>
+<p class="links"><a href="https://schuttsapplemill.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Schutt%27s%20Apple%20Mill%2C%201063%20Plank%20Rd%2C%20Webster%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+<li class="stop">
+<div class="when">6:30</div>
+<div class="card">
+<div class="photo ph-fallback" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5c3.5 2 6.5 6 5.5 11.5-1 4.5-3.5 6.5-5.5 7.5-2-1-4.5-3-5.5-7.5C5.5 7.5 8.5 3.5 12 1.5zm0 3.2v14.8"/></svg></div>
+<h4>Dinner: Redd</h4>
+<p>Rochester&#x27;s only pick on USA Today&#x27;s Restaurants of the Year (Mon 5 to 10). Capitano if you saved it, Black &amp; Blue, or Dogtown for a garbage-plate send-off.</p>
+<p class="links"><a href="https://reddrochester.com/" target="_blank" rel="noopener">Website</a> <a href="https://reddrochester.com/menus/" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Redd%2C%2024%20Winthrop%20St%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p>
+</div></li>
+</ol>
+</section>
+<section id="leaves-sec"><h2>Leaf drives</h2><p class="lead">Spare hour? These are the close ones. Want to swap a day? The longer drives are ranked for this weekend.</p>
+<h3>Under an hour from the house</h3>
+<div class="grid">
+<article class="tile">
+<div class="photo tile-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Lake_Ontario_shoreline_at_Durand_Eastman_Park%2C_Rochester%2C_New_York_-_20220131_-_03.jpg/960px-Lake_Ontario_shoreline_at_Durand_Eastman_Park%2C_Rochester%2C_New_York_-_20220131_-_03.jpg" alt="Durand Eastman Park" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Lake_Ontario_shoreline_at_Durand_Eastman_Park%2C_Rochester%2C_New_York_-_20220131_-_03.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Durand Eastman Park</h4><p class="meta">10 min</p><p>Hills, an arboretum and the lakeshore. Best late in the weekend.</p>
+<p class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Durand%20Eastman%20Park%2C%20Lakeshore%20Blvd%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p>
+</article>
+<article class="tile">
+<div class="photo tile-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/IrondequoitBayViewedFromLucienMorinPark.JPG/960px-IrondequoitBayViewedFromLucienMorinPark.JPG" alt="Irondequoit Bay bluffs" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:IrondequoitBayViewedFromLucienMorinPark.JPG" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Irondequoit Bay bluffs</h4><p class="meta">5 min</p><p>Lucien Morin Park trails above the bay, right by the house.</p>
+<p class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Lucien%20Morin%20Park%2C%20Empire%20Blvd%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p>
+</article>
+<article class="tile">
+<div class="photo tile-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Corbett%27s_Glen_Tunnel%2C_Brighton%2C_New_York.jpg/960px-Corbett%27s_Glen_Tunnel%2C_Brighton%2C_New_York.jpg" alt="Corbett&#x27;s Glen" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Corbett%27s_Glen_Tunnel%2C_Brighton%2C_New_York.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Corbett&#x27;s Glen</h4><p class="meta">15 min</p><p>Stone railroad tunnel to Postcard Falls, in Brighton.</p>
+<p class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Corbett%27s%20Glen%20Nature%20Park%2C%20Brighton%20NY" target="_blank" rel="noopener">Map</a></p>
+</article>
+<article class="tile">
+<div class="photo tile-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Rochester_-_Lamberton_Conservatory.jpg/960px-Rochester_-_Lamberton_Conservatory.jpg" alt="Highland Park and Cobbs Hill" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Rochester_-_Lamberton_Conservatory.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Highland Park and Cobbs Hill</h4><p class="meta">15 min</p><p>Olmsted arboretum, sunken garden, skyline reservoir.</p>
+<p class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Highland%20Park%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p>
+</article>
+<article class="tile">
+<div class="photo tile-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/1874_Gate_House.jpg/960px-1874_Gate_House.jpg" alt="Mt. Hope Cemetery" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:1874_Gate_House.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Mt. Hope Cemetery</h4><p class="meta">15 min</p><p>The city&#x27;s best-kept fall color secret.</p>
+<p class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Mount%20Hope%20Cemetery%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p>
+</article>
+<article class="tile">
+<div class="photo tile-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Lift_Bridge_at_Fairport_on_the_Erie_Canal_%289279964518%29.jpg/960px-Lift_Bridge_at_Fairport_on_the_Erie_Canal_%289279964518%29.jpg" alt="Erie Canal, Pittsford and Fairport" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Lift_Bridge_at_Fairport_on_the_Erie_Canal_%289279964518%29.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Erie Canal, Pittsford and Fairport</h4><p class="meta">20 min</p><p>Towpath walks, Schoen Place, the Fairport lift bridge.</p>
+<p class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Fairport%20Lift%20Bridge%2C%20Fairport%20NY" target="_blank" rel="noopener">Map</a></p>
+</article>
+<article class="tile">
+<div class="photo tile-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Finger_Lakes_Hemlock_Lake.jpg/960px-Finger_Lakes_Hemlock_Lake.jpg" alt="Hemlock and Canadice Lakes" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Finger_Lakes_Hemlock_Lake.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Hemlock and Canadice Lakes</h4><p class="meta">45 min</p><p>Rochester&#x27;s wild water-supply lakes, no development, quiet back roads.</p>
+<p class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Hemlock%20Lake%2C%20Hemlock%20NY" target="_blank" rel="noopener">Map</a></p>
+</article>
+<article class="tile">
+<div class="photo tile-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chimney_Bluffs_-_Wolcott%2C_New_York_13.jpg/960px-Chimney_Bluffs_-_Wolcott%2C_New_York_13.jpg" alt="Chimney Bluffs" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Chimney_Bluffs_-_Wolcott%2C_New_York_13.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Chimney Bluffs</h4><p class="meta">60 min</p><p>150-foot clay spires over Lake Ontario, $5 a car.</p>
+<p class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Chimney%20Bluffs%20State%20Park%2C%20Wolcott%20NY" target="_blank" rel="noopener">Map</a></p>
+</article>
+</div>
+<h3>Worth a day</h3>
+<div class="grid">
+<article class="tile">
+<div class="photo tile-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Middle_Falls_of_the_Genesee_River_at_Letchworth_State_Park%2C_New_York%2C_USA.jpg/960px-Middle_Falls_of_the_Genesee_River_at_Letchworth_State_Park%2C_New_York%2C_USA.jpg" alt="Letchworth State Park" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Middle_Falls_of_the_Genesee_River_at_Letchworth_State_Park%2C_New_York%2C_USA.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Letchworth State Park</h4><p class="meta">50 to 60 min</p><p>The Grand Canyon of the East. 17-mile gorge, three big falls, at peak. In the plan for Monday.</p>
+<p class="links"><a href="https://parks.ny.gov/parks/letchworth" target="_blank" rel="noopener">Details</a></p>
+</article>
+<article class="tile">
+<div class="photo tile-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Canandaigua_Lake_scenic.jpg/960px-Canandaigua_Lake_scenic.jpg" alt="Canandaigua Lake and Naples loop" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Canandaigua_Lake_scenic.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Canandaigua Lake and Naples loop</h4><p class="meta">50 to 70 min</p><p>Route 21 down the lake, grape pie, wineries and the Bristol chairlift. In the plan for Sunday.</p>
+<p class="links"><a href="https://www.bristolmountain.com/fall-sky-rides/" target="_blank" rel="noopener">Details</a></p>
+</article>
+<article class="tile">
+<div class="photo tile-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Bluffpoint.jpg/960px-Bluffpoint.jpg" alt="Keuka Lake and Bluff Point" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Bluffpoint.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Keuka Lake and Bluff Point</h4><p class="meta">75 to 90 min</p><p>Route 54A along the water, the stone Garrett Chapel on the bluff, Dr. Frank and Bully Hill wineries. All open Monday.</p>
+<p class="links"><a href="https://garrettchapel.org/" target="_blank" rel="noopener">Details</a></p>
+</article>
+<article class="tile">
+<div class="photo tile-photo ph-fallback" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5c3.5 2 6.5 6 5.5 11.5-1 4.5-3.5 6.5-5.5 7.5-2-1-4.5-3-5.5-7.5C5.5 7.5 8.5 3.5 12 1.5zm0 3.2v14.8"/></svg></div>
+<h4>Skaneateles</h4><p class="meta">90 min</p><p>Prettiest village in the Finger Lakes; drive both shores, lunch at Doug&#x27;s Fish Fry.</p>
+<p class="links"><a href="https://www.skaneateles.com/" target="_blank" rel="noopener">Details</a></p>
+</article>
+<article class="tile">
+<div class="photo tile-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Taughannock_Falls.JPG/960px-Taughannock_Falls.JPG" alt="Taughannock Falls, Ithaca" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Taughannock_Falls.JPG" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Taughannock Falls, Ithaca</h4><p class="meta">1 hr 45</p><p>215 feet, taller than Niagara, seen from a two-minute overlook. $10 a car.</p>
+<p class="links"><a href="https://parks.ny.gov/parks/taughannockfalls" target="_blank" rel="noopener">Details</a></p>
+</article>
+<article class="tile">
+<div class="photo tile-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Rainbow_Falls_Watkins_Glen_State_Park%2C_Watkins_Glen_NY_2519.jpg/960px-Rainbow_Falls_Watkins_Glen_State_Park%2C_Watkins_Glen_NY_2519.jpg" alt="Watkins Glen gorge" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Rainbow_Falls_Watkins_Glen_State_Park%2C_Watkins_Glen_NY_2519.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Watkins Glen gorge</h4><p class="meta">1 hr 45</p><p>19 waterfalls in two miles of stone stairs and tunnels. Leaves lag here; go for the gorge.</p>
+<p class="links"><a href="https://parks.ny.gov/parks/watkinsglen" target="_blank" rel="noopener">Details</a></p>
+</article>
+<article class="tile">
+<div class="photo tile-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Stony_Brook_State_Park_waterfalls.jpg/960px-Stony_Brook_State_Park_waterfalls.jpg" alt="Stony Brook State Park" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Stony_Brook_State_Park_waterfalls.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Stony Brook State Park</h4><p class="meta">65 min</p><p>Three waterfalls in a narrow gorge, free; tack it onto Letchworth.</p>
+<p class="links"><a href="https://parks.ny.gov/parks/stonybrook" target="_blank" rel="noopener">Details</a></p>
+</article>
+<article class="tile">
+<div class="photo tile-photo"><img src="https://hurdorchards.com/wp-content/uploads/2026/07/2022-food-photos-8-harvest-WEBSITE-1024x683.jpg" alt="Hurd Orchards, Holley" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<h4>Hurd Orchards, Holley</h4><p class="meta">50 min west</p><p>Pie in the Historic Apple Barn, Saturdays 12 to 5. Charming and very grown-up.</p>
+<p class="links"><a href="https://hurdorchards.com/" target="_blank" rel="noopener">Details</a></p>
+</article>
+</div>
+<div class="note">Skip this year: the Adirondacks (four hours and past peak) and Ellicottville (past peak). The Bristol Mountain chairlift runs Saturday and Sunday only.</div>
+</section>
+<section id="food"><h2>Food</h2><p class="lead">Rochester specialties the Texans should try: the garbage plate, Zweigle's white hots, sponge candy, fried cakes from a cider mill, grape pie in Naples, and Genesee Cream Ale over the falls. Monday is the trap; a lot of places close. Hours below are for this weekend.</p>
+<h3>Breakfast and coffee</h3>
+<ul class="rows">
+<li class="row">
+<div class="thumb"><img src="https://villagebakeries.com/wp-content/uploads/2023/06/Bakery-1-1500x630.jpg" alt="Village Bakery &amp; Cafe" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Village Bakery &amp; Cafe</h4><p class="meta">145 Culver Rd at Park Ave</p><p>Daily 6:30 to 3</p><p class="links"><a href="https://villagebakeries.com/" target="_blank" rel="noopener">Website</a> <a href="https://villagebakeries.com/menus/" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Village%20Bakery%20%26%20Cafe%2C%20145%20Culver%20Rd%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://images.squarespace-cdn.com/content/v1/588a2ca9579fb3ca7c83be6b/38a62869-d138-4796-9962-b18643cd1037/FairPour+Roc.jpg" alt="FairPour Coffee Roasters" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>FairPour Coffee Roasters</h4><p class="meta">42 Adventure Pl, NOTA</p><p>Daily 8 to 4</p><p class="links"><a href="https://www.fairpour.com/" target="_blank" rel="noopener">Website</a> <a href="https://fairpour1.square.site" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=FairPour%20Coffee%20Roasters%2C%2042%20Adventure%20Pl%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://www.jinesrestaurant.com/images/header-1920px.jpg" alt="Jines" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Jines</h4><p class="meta">658 Park Ave</p><p>Sat 7 to 9 pm, Sun and Mon 7 to 3</p><p class="links"><a href="https://www.jinesrestaurant.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.jinesrestaurant.com/menu.html" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Jines%20Restaurant%2C%20658%20Park%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://www.madhatterrestaurant.com/uploads/9/5/2/2/9522194/published/img-3924_1.jpeg" alt="Mad Hatter" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Mad Hatter</h4><p class="meta">176 S Goodman St</p><p>Sat and Sun 8 to 2:30, closed Mon</p><p class="links"><a href="https://www.madhatterrestaurant.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Mad%20Hatter%20Restaurant%20%26%20Bakery%2C%20176%20S%20Goodman%20St%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Highland_Park_Diner%2C_Rochester_New_York.jpg/960px-Highland_Park_Diner%2C_Rochester_New_York.jpg" alt="Highland Park Diner" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Highland_Park_Diner%2C_Rochester_New_York.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<div><h4>Highland Park Diner</h4><p class="meta">960 S Clinton Ave</p><p>Daily 8 to 3</p><p class="links"><a href="https://highlandparkdinerny.com/" target="_blank" rel="noopener">Website</a> <a href="https://highlandparkdinerny.com/food-menu" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Highland%20Park%20Diner%2C%20960%20S%20Clinton%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Interior_concourse%2C_Rochester_Public_Market%2C_Rochester%2C_New_York_-_20191026.jpg/960px-Interior_concourse%2C_Rochester_Public_Market%2C_Rochester%2C_New_York_-_20191026.jpg" alt="Rochester Public Market" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Interior_concourse%2C_Rochester_Public_Market%2C_Rochester%2C_New_York_-_20191026.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<div><h4>Rochester Public Market</h4><p class="meta">280 N Union St</p><p>Saturday only, 6 to 3</p><p class="links"><a href="https://www.cityofrochester.gov/publicmarket" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Rochester%20Public%20Market%2C%20280%20N%20Union%20St%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+</ul>
+<h3>Lunch and snacks</h3>
+<ul class="rows">
+<li class="row">
+<div class="thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/High_Falls_Terrace_Park%2C_Rochester_NY_June_2025.jpg/960px-High_Falls_Terrace_Park%2C_Rochester_NY_June_2025.jpg" alt="Genesee Brew House" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:High_Falls_Terrace_Park%2C_Rochester_NY_June_2025.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<div><h4>Genesee Brew House</h4><p class="meta">25 Cataract St, High Falls</p><p>Daily 11 to 10 (Sat to 11)</p><p class="links"><a href="https://www.geneseebeer.com/brewhouse/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Genesee%20Brew%20House%2C%2025%20Cataract%20St%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Dinosaur_BBQ_in_Rochester_-_by_David_Sifry.jpg/960px-Dinosaur_BBQ_in_Rochester_-_by_David_Sifry.jpg" alt="Dinosaur Bar-B-Que" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Dinosaur_BBQ_in_Rochester_-_by_David_Sifry.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<div><h4>Dinosaur Bar-B-Que</h4><p class="meta">99 Court St, downtown</p><p>Daily 11 to 9 (Sat to 10)</p><p class="links"><a href="https://dinosaurbarbque.com/" target="_blank" rel="noopener">Website</a> <a href="https://dinosaurbarbque.com/rochester-menu" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Dinosaur%20Bar-B-Que%2C%2099%20Court%20St%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://img1.wsimg.com/isteam/ip/174effaf-498b-4126-bedb-06115e57f98c/peelsonwheels_2021-2512-Edit.jpg" alt="Peels on Wheels Pizza Garage" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Peels on Wheels Pizza Garage</h4><p class="meta">1157 Culver Rd</p><p>Wed to Sat 11 to 8, pickup only, pre-order</p><p class="links"><a href="https://peelsonwheelspizza.com/" target="_blank" rel="noopener">Website</a> <a href="https://peelsonwheelspizza.com/pizza-garage" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Peels%20on%20Wheels%20Pizza%20Garage%2C%201157%20Culver%20Rd%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://storyblok.pleinaircdn.com/f/245742/2048x651/9752b4f472/italian-sausage_web-banner-r3.jpg" alt="DiBella&#x27;s Subs" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>DiBella&#x27;s Subs</h4><p class="meta">Several east-side shops</p><p>Daily; the road-trip sandwich</p><p class="links"><a href="https://dibellas.com/" target="_blank" rel="noopener">Website</a> <a href="https://dibellas.com/menu" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=DiBella%27s%20Subs%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://swanmarket.com/wp-content/uploads/2021/01/dsc04582-2048x1264.jpg" alt="Swan Market" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Swan Market</h4><p class="meta">231 Parsells Ave</p><p>Saturday only: German lunch 11 to 2</p><p class="links"><a href="https://swanmarket.com/" target="_blank" rel="noopener">Website</a> <a href="https://swanmarket.com/menu/" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Swan%20Market%2C%20231%20Parsells%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://dogtownhots.com/wp-content/uploads/2021/08/home-accent-1024x684.jpg" alt="Dogtown" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Dogtown</h4><p class="meta">691 Monroe Ave</p><p>Sat and Mon 11 to 10:45, closed Sun. Garbage plates and white hots</p><p class="links"><a href="https://dogtownhots.com/" target="_blank" rel="noopener">Website</a> <a href="https://dogtownhots.com/meaty-menu/" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Dogtown%20Hots%2C%20691%20Monroe%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/The_Garbage_Plate%2C_Nick_Tahou_Hots_2025.jpg/960px-The_Garbage_Plate%2C_Nick_Tahou_Hots_2025.jpg" alt="Nick Tahou Hots" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:The_Garbage_Plate%2C_Nick_Tahou_Hots_2025.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<div><h4>Nick Tahou Hots</h4><p class="meta">320 W Main St</p><p>Saturday only, 11 to 7. Birthplace of the garbage plate, 1918</p><p class="links"><a href="https://garbageplate.com/" target="_blank" rel="noopener">Website</a> <a href="https://garbageplate.com/images/orderform_mainstreet.pdf" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Nick%20Tahou%20Hots%2C%20320%20W%20Main%20St%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://steverscandy.com/wp-content/uploads/2026/05/stevers-900x900.jpg" alt="Stever&#x27;s Candies" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Stever&#x27;s Candies</h4><p class="meta">623 Park Ave</p><p>Daily 10 to 9. Sponge candy since 1946</p><p class="links"><a href="https://steverscandy.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Stever%27s%20Candies%2C%20623%20Park%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://img2.myshoplocal.com/homebg/parkleigh-have-fun.-feel-good.-buy-stuff-1080-x-300-px-5.jpg" alt="Parkleigh" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Parkleigh</h4><p class="meta">215 Park Ave</p><p>Sat 10 to 5:30, Sun 11 to 3, closed Mon. Gifts and candy</p><p class="links"><a href="https://www.parkleigh.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Parkleigh%2C%20215%20Park%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://schuttsapplemill.com/wp-content/uploads/2022/07/IMG_0947-scaled-1-e1649160808555.jpg" alt="Schutt&#x27;s Apple Mill" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Schutt&#x27;s Apple Mill</h4><p class="meta">1063 Plank Rd, Webster</p><p>Daily 8 to 6. Fried cakes, cider, hard-cider tasting room</p><p class="links"><a href="https://schuttsapplemill.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Schutt%27s%20Apple%20Mill%2C%201063%20Plank%20Rd%2C%20Webster%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://www.abbottscustard.com/wp-content/uploads/2019/01/AFC_Night_Shot.jpg" alt="Abbott&#x27;s Frozen Custard" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Abbott&#x27;s Frozen Custard</h4><p class="meta">4791 Lake Ave, Charlotte</p><p>Daily 12 to 9 posted; call 585-865-7400, end of season</p><p class="links"><a href="https://www.abbottscustard.com/location/lake-avenue-rochester-ny/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Abbott%27s%20Frozen%20Custard%2C%204791%20Lake%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Pittsford_Farms_Dairy.jpg/960px-Pittsford_Farms_Dairy.jpg" alt="Pittsford Farms Dairy" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Pittsford_Farms_Dairy.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<div><h4>Pittsford Farms Dairy</h4><p class="meta">44 N Main St, Pittsford</p><p>By the canal; fall ice cream flavors</p><p class="links"><a href="https://www.pittsfordfarmsdairy.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.pittsfordfarmsdairy.com/menu-aviator" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Pittsford%20Farms%20Dairy%2C%2044%20N%20Main%20St%2C%20Pittsford%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/WegmansTheFoodBarPittsfordNY.JPG/960px-WegmansTheFoodBarPittsfordNY.JPG" alt="Wegmans Pittsford" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:WegmansTheFoodBarPittsfordNY.JPG" target="_blank" rel="noopener">Wikimedia</a></div>
+<div><h4>Wegmans Pittsford</h4><p class="meta">3195 Monroe Ave</p><p>Daily 6 am to midnight</p><p class="links"><a href="https://www.wegmans.com/stores/pittsford-ny/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Wegmans%2C%203195%20Monroe%20Ave%2C%20Pittsford%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://brewandbrats.com/wp-content/uploads/2020/06/1BNBWagon.jpg" alt="Brew &amp; Brats at Arbor Hill" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Brew &amp; Brats at Arbor Hill</h4><p class="meta">6461 Route 64, Naples</p><p>Sat 12 to 9, Sun 12 to 7, Mon 12 to 5</p><p class="links"><a href="https://brewandbrats.com/" target="_blank" rel="noopener">Website</a> <a href="https://brewandbrats.com/wp-content/uploads/2026/05/All-Summer-Menus-2026.pdf" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Brew%20%26%20Brats%20at%20Arbor%20Hill%2C%20Naples%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Glen_Iris_Inn.jpg/960px-Glen_Iris_Inn.jpg" alt="Glen Iris Inn" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Glen_Iris_Inn.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<div><h4>Glen Iris Inn</h4><p class="meta">Letchworth State Park</p><p>Lunch daily 11:30 to 3, reserve on Tock</p><p class="links"><a href="https://www.glenirisinn.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.glenirisinn.com/dining/" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Glen%20Iris%20Inn%2C%20Castile%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+</ul>
+<h3>Dinner</h3>
+<ul class="rows">
+<li class="row">
+<div class="thumb"><img src="https://static.wixstatic.com/media/4bef48_431d19f0730d4ffbbd9d8eaae4f7de2ff000.jpg/v1/fill/w_980,h_630,al_c,q_85/4bef48_431d19f0730d4ffbbd9d8eaae4f7de2ff000.jpg" alt="Capitano" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Capitano</h4><p class="meta">1400 Empire Blvd, Webster, 10 min from home</p><p>Italian, steak, seafood. Sat 4 to 11, Sun 1 to 9, Mon 4 to 10</p><p class="links"><a href="https://www.eatcapitano.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.eatcapitano.com/menus" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Capitano%20Restaurant%2C%201400%20Empire%20Blvd%2C%20Webster%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://static.wixstatic.com/media/9fdacc_dfbd0f51a10d4928b740debaa4b790ad.jpg/v1/fill/w_980,h_496,al_c,q_85/9fdacc_dfbd0f51a10d4928b740debaa4b790ad.jpg" alt="Hedges Nine Mile Point" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Hedges Nine Mile Point</h4><p class="meta">1290 Lake Rd, Webster</p><p>Lakefront. Saturday only (5 to 10), closed Sun and Mon</p><p class="links"><a href="https://www.hedgesninemilepoint.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.hedgesninemilepoint.com/menu-1" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Hedges%20Nine%20Mile%20Point%2C%201290%20Lake%20Rd%2C%20Webster%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://static01.sh-websites.com/uploads/sites/169/2025/08/reservations-1024x683.jpg" alt="Lento" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Lento</h4><p class="meta">274 N Goodman St, Village Gate</p><p>Farm-to-table Italian. Saturday only, last seating 8:30</p><p class="links"><a href="https://www.lentorestaurant.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.lentorestaurant.com/menu/" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Lento%2C%20274%20N%20Goodman%20St%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://vibe.filesafe.space/1784885419272210174/attachments/6569f2cd-1f8d-4946-b3e3-2c7b362f8948.jpg" alt="Ristorante Lucano" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Ristorante Lucano</h4><p class="meta">1815 East Ave</p><p>Classic Italian. Saturday from 5</p><p class="links"><a href="https://lucanoroc.com/" target="_blank" rel="noopener">Website</a> <a href="https://lucanoroc.com/menu" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Ristorante%20Lucano%2C%201815%20East%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb ph-fallback" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5c3.5 2 6.5 6 5.5 11.5-1 4.5-3.5 6.5-5.5 7.5-2-1-4.5-3-5.5-7.5C5.5 7.5 8.5 3.5 12 1.5zm0 3.2v14.8"/></svg></div>
+<div><h4>Redd</h4><p class="meta">24 Winthrop St</p><p>New American, USA Today Restaurants of the Year. Sat and Mon 5 to 10, closed Sun</p><p class="links"><a href="https://reddrochester.com/" target="_blank" rel="noopener">Website</a> <a href="https://reddrochester.com/menus/" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Redd%2C%2024%20Winthrop%20St%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://images.squarespace-cdn.com/content/v1/6228de45f6207a08b57da132/1649256002054-305O8I9HY110XFGD6FVK/KJ6A7248.jpg" alt="Restaurant Good Luck" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Restaurant Good Luck</h4><p class="meta">50 Anderson Ave</p><p>Shareable plates, famous burger. Saturday 4:30 to 2 am; books out</p><p class="links"><a href="https://www.restaurantgoodluck.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.restaurantgoodluck.com/menus" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Restaurant%20Good%20Luck%2C%2050%20Anderson%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://blackandbluesteakandcrab.com/wp-content/uploads/2024/05/bb-featured.jpg" alt="Black &amp; Blue Steak and Crab" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Black &amp; Blue Steak and Crab</h4><p class="meta">3349 Monroe Ave, Pittsford</p><p>Sat 4 to 10, Sun and Mon 4 to 9</p><p class="links"><a href="https://blackandbluesteakandcrab.com/rochester/" target="_blank" rel="noopener">Website</a> <a href="https://blackandbluesteakandcrab.com/rochester/menu/" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Black%20%26%20Blue%20Steak%20and%20Crab%2C%203349%20Monroe%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://images.squarespace-cdn.com/content/v1/5c2575fff2e6b10e47e5471f/d60cc2e2-f7e2-4037-a501-a6c53ba3b4e6/WebFrontjpg-01.jpg" alt="Vern&#x27;s" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Vern&#x27;s</h4><p class="meta">696 Park Ave</p><p>Small plates, bee sting pizza, cocktails. Daily from 4, no reservations</p><p class="links"><a href="https://www.iloveverns.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.iloveverns.com/menus" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Vern%27s%2C%20696%20Park%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://static.spotapps.co/website_images/ab_websites/190859_website_v1/events_page_back.jpg" alt="Neno&#x27;s" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Neno&#x27;s</h4><p class="meta">642 Monroe Ave</p><p>Mexican street food. Sat 11 to 9:30, Sun and Mon 11 to 8</p><p class="links"><a href="https://nenosmexican.com/" target="_blank" rel="noopener">Website</a> <a href="https://nenosmexican.com/rochester-neno-s-gourmet-mexican-street-food-food-menu" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Neno%27s%2C%20642%20Monroe%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+</ul>
+<h3>Drinks</h3>
+<ul class="rows">
+<li class="row">
+<div class="thumb"><img src="https://images.squarespace-cdn.com/content/v1/5d9e2b1ce701446cb26943c8/1781188668694-M67EFIPB88XDY12ORKLI/image-asset.jpeg" alt="Strangebird Brewing" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Strangebird Brewing</h4><p class="meta">62 Marshall St, South Wedge</p><p>Sat, Sun, Mon 12 to 11, scratch kitchen</p><p class="links"><a href="https://www.strangebirdbeer.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.strangebirdbeer.com/eat" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Strangebird%20Brewing%2C%2062%20Marshall%20St%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://threeheadsbrewing.com/wp-content/uploads/2016/08/beer-garden-image.jpg" alt="Three Heads Brewing" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Three Heads Brewing</h4><p class="meta">186 Atlantic Ave, NOTA</p><p>Sat 12 to 11, Sun 12 to 5, Mon 2 to 9</p><p class="links"><a href="https://threeheadsbrewing.com/" target="_blank" rel="noopener">Website</a> <a href="https://threeheadsbrewing.com/beers/" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Three%20Heads%20Brewing%2C%20186%20Atlantic%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://images.squarespace-cdn.com/content/v1/553459d5e4b0f20e2b6084cd/1513779746730-2F6S1U1JIM1FWSG2J64G/Playhouse20171206DSC_1658.jpg" alt="Swillburger / The Playhouse" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Swillburger / The Playhouse</h4><p class="meta">820 S Clinton Ave</p><p>Arcade bar in an old church. Sat 11:30 to 1 am, Sun 11:30 to 12, closed Mon</p><p class="links"><a href="https://www.theplayhouseroc.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.toasttab.com/swillburger/v3" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Swillburger%2C%20820%20S%20Clinton%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://radio-social.com/wp-content/uploads/2020/08/bowling-alley1.jpg" alt="Radio Social" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Radio Social</h4><p class="meta">20 Carlson Rd</p><p>Bowling, bocce, cocktails. Sat 3 to midnight, Sun brunch 11 to 2, closed Mon</p><p class="links"><a href="https://radio-social.com/" target="_blank" rel="noopener">Website</a> <a href="https://radio-social.com/food/" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Radio%20Social%2C%2020%20Carlson%20Rd%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://www.livingrootswine.com/wp-content/uploads/2023/05/632b537cfae8d55bb4e7494f_LivingRoots-Vineyard-1-1-1.jpg" alt="Living Roots Wine &amp; Co" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Living Roots Wine &amp; Co</h4><p class="meta">1255 University Ave</p><p>Urban winery, Finger Lakes and Australian flights. Reserve on Tock</p><p class="links"><a href="https://www.livingrootswine.com/rochester/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Living%20Roots%20Wine%20%26%20Co%2C%201255%20University%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://static.spotapps.co/website_images/ab_websites/313519_website_v1/embark.jpg" alt="Embark Craft Ciderworks" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Embark Craft Ciderworks</h4><p class="meta">6895 Lake Ave, Williamson, 40 min</p><p>20 ciders on tap, full menu. Sat 12 to 10, Sun 11 to 6, Mon 12 to 8</p><p class="links"><a href="https://embarkcraftciderworks.com/" target="_blank" rel="noopener">Website</a> <a href="https://embarkcraftciderworks.com/food-menu" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Embark%20Craft%20Ciderworks%2C%206895%20Lake%20Ave%2C%20Williamson%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://images.squarespace-cdn.com/content/v1/5b2c0758b27e39f8f8a97d55/1735256305375-GBBZHDRSRBKMDCIAJMV5/302521776_547942423821932_96945887514339107_n.jpg" alt="Rootstock Cider &amp; Spirits" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Rootstock Cider &amp; Spirits</h4><p class="meta">3274 Eddy Rd, Williamson</p><p>Orchard patio, 20 taps, food trailer; call for hours</p><p class="links"><a href="https://www.rootstockciderworks.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.rootstockciderworks.com/food-menu" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Rootstock%20Cider%20%26%20Spirits%2C%203274%20Eddy%20Rd%2C%20Williamson%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://static.wixstatic.com/media/c88763_17dfda02692e40f3af735cf4761897b3~mv2.jpg/v1/fill/w_1415,h_747,al_c,q_85/c88763_17dfda02692e40f3af735cf4761897b3~mv2.jpg" alt="Blue Barn Cidery" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Blue Barn Cidery</h4><p class="meta">928 Manitou Rd, Hilton</p><p>Sat 11 to 9, Sun 11 to 6, closed Mon</p><p class="links"><a href="https://www.bluebarncidery.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.bluebarncidery.com/menu" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Blue%20Barn%20Cidery%2C%20928%20Manitou%20Rd%2C%20Hilton%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://craftpeak-cooler-images.imgix.net/other-half-brewing/OTHER-HALF-ROC-20.jpg" alt="Other Half Finger Lakes" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Other Half Finger Lakes</h4><p class="meta">Routes 5 &amp; 20, Bloomfield</p><p>Sat 11 to 9, Sun 11 to 8, Mon 2 to 8</p><p class="links"><a href="https://otherhalfbrewing.com/location/bloomfield/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Other%20Half%20Finger%20Lakes%2C%20Bloomfield%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://www.drfrankwines.com/wp-content/uploads/2025/02/Tasting-Room-March-04-2024-9-1200w.jpg" alt="Dr. Konstantin Frank" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Dr. Konstantin Frank</h4><p class="meta">Hammondsport, Keuka Lake</p><p>Daily 10 to 5; seated tasting $18</p><p class="links"><a href="https://www.drfrankwines.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Dr.%20Konstantin%20Frank%20Winery%2C%20Hammondsport%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://www.bullyhillvineyards.com/assets/client/BullyHillVineyardsHome.jpg" alt="Bully Hill Vineyards" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Bully Hill Vineyards</h4><p class="meta">Hammondsport, Keuka Lake</p><p>Daily 10 to 5, lunch restaurant</p><p class="links"><a href="https://www.bullyhillvineyards.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.bullyhillvineyards.com/food/restaurant" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Bully%20Hill%20Vineyards%2C%20Hammondsport%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://static.wixstatic.com/media/86f9e9_c5d6209c875b4b75a3f84686cad8fbfe~mv2.jpg" alt="Marge&#x27;s Lakeside Inn" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Marge&#x27;s Lakeside Inn</h4><p class="meta">4909 Culver Rd, Sea Breeze</p><p>Beach tiki bar, one of America&#x27;s best bars (Time Out 2025). Seasonal; check before going</p><p class="links"><a href="https://www.margeslakesideinn.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Marge%27s%20Lakeside%20Inn%2C%204909%20Culver%20Rd%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
+</li>
+</ul>
+</section>
+<section id="epic"><h2>Epic add-ons</h2><p class="lead">Bigger swings if you want one. Niagara Falls can replace Sunday or Monday; the boats and balloon are once-in-a-trip.</p>
+<div class="stack">
+<article class="card wide">
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Maid_of_the_Mist_VII_approaching_the_Horseshoe_Falls%2C_West_view_20170418_1.jpg/960px-Maid_of_the_Mist_VII_approaching_the_Horseshoe_Falls%2C_West_view_20170418_1.jpg" alt="Niagara Falls" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Maid_of_the_Mist_VII_approaching_the_Horseshoe_Falls%2C_West_view_20170418_1.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Niagara Falls</h4><p class="meta">1 hr 25 on the Thruway, or 1 hr 50 the scenic way</p><p>Take Route 104 west through the apple country to Lewiston, then the Niagara Scenic Parkway along the gorge (stop at Devil&#x27;s Hole and Whirlpool State Parks for the rapids and the color). Niagara Falls State Park is free; Goat Island parking about $15. Maid of the Mist runs through Nov 8, $30.25, ponchos included and worth it in the cold. Cave of the Winds is open Sat and Sun ($23) but closed Mon Oct 19 and 20. Passports needed for the Canadian side.</p><p class="links"><a href="https://www.maidofthemist.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Niagara%20Falls%20State%20Park%2C%20Niagara%20Falls%20NY" target="_blank" rel="noopener">Map</a></p>
+</article>
+<article class="card wide">
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Whirlpool_Jet_Boat_Tours_in_Devil%27s_Hole_Rapids_in_Niagara_River_Gorge.jpg/960px-Whirlpool_Jet_Boat_Tours_in_Devil%27s_Hole_Rapids_in_Niagara_River_Gorge.jpg" alt="Whirlpool Jet Boat, Lewiston" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Whirlpool_Jet_Boat_Tours_in_Devil%27s_Hole_Rapids_in_Niagara_River_Gorge.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Whirlpool Jet Boat, Lewiston</h4><p class="meta">On the Niagara day</p><p>An hour through the Devil&#x27;s Hole rapids in the Niagara Gorge, wet boat or dry dome boat, $68 plus fuel surcharge. The most fun thing in Western New York; the Lewiston season runs on select days through about Oct 25, so call 1-888-438-4444 this week.</p><p class="links"><a href="https://whirlpooljet.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Whirlpool%20Jet%20Boat%20Tours%2C%20115%20S%20Water%20St%2C%20Lewiston%20NY" target="_blank" rel="noopener">Map</a></p>
+</article>
+<article class="card wide">
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Corning_Museum_of_Glass_Exterior.JPG/960px-Corning_Museum_of_Glass_Exterior.JPG" alt="Corning Museum of Glass" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Corning_Museum_of_Glass_Exterior.JPG" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Corning Museum of Glass</h4><p class="meta">2 hrs, pairs with Keuka Lake</p><p>The world&#x27;s largest glass collection, live hot-glass shows all day, and a studio where you blow your own ornament. Daily 9 to 5, $25. The Rockwell Museum of Western art is a five-minute walk. Drive down through Hammondsport for the leaves.</p><p class="links"><a href="https://home.cmog.org/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Corning%20Museum%20of%20Glass%2C%201%20Museum%20Way%2C%20Corning%20NY" target="_blank" rel="noopener">Map</a></p>
+</article>
+<article class="card wide">
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Erie_Canal_Cruise_-_Colonial_Belle.jpg/960px-Erie_Canal_Cruise_-_Colonial_Belle.jpg" alt="Colonial Belle canal cruise" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Erie_Canal_Cruise_-_Colonial_Belle.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Colonial Belle canal cruise</h4><p class="meta">Fairport, 25 min</p><p>Sunday Oct 18, 2:30 to 5:30: a narrated Erie Canal lock cruise with live music, $49. The only canal boat sailing this weekend. Sam Patch&#x27;s cider-and-donut cruises from Pittsford run through Nov 1 ($35); call 585-662-5748 for times.</p><p class="links"><a href="https://www.colonialbelle.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Colonial%20Belle%2C%20400%20Packetts%20Landing%2C%20Fairport%20NY" target="_blank" rel="noopener">Map</a></p>
+</article>
+<article class="card wide">
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Rainbow_Falls_Watkins_Glen_State_Park%2C_Watkins_Glen_NY_2519.jpg/960px-Rainbow_Falls_Watkins_Glen_State_Park%2C_Watkins_Glen_NY_2519.jpg" alt="Captain Bill&#x27;s Seneca Lake cruise" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Rainbow_Falls_Watkins_Glen_State_Park%2C_Watkins_Glen_NY_2519.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Captain Bill&#x27;s Seneca Lake cruise</h4><p class="meta">Watkins Glen, 1 hr 45</p><p>Sightseeing cruises at 2 and 3:30, lunch cruise $71, dinner cruise $102; running through Oct 25. Pairs with the Watkins Glen gorge.</p><p class="links"><a href="https://senecaharborstation.com/captain-bills-cruises/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Captain%20Bill%27s%20Seneca%20Lake%20Cruises%2C%20Watkins%20Glen%20NY" target="_blank" rel="noopener">Map</a></p>
+</article>
+<article class="card wide">
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Waterfalls_at_Letchworth_state_park.jpg/960px-Waterfalls_at_Letchworth_state_park.jpg" alt="Hot-air balloon over Letchworth" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Waterfalls_at_Letchworth_state_park.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<h4>Hot-air balloon over Letchworth</h4><p class="meta">Sunrise or sunset</p><p>Balloons Over Letchworth floats over the gorge at peak color, about an hour aloft, $445 a person, weather permitting. October weekends are nearly full; weekdays have space. The truly epic version of Monday.</p><p class="links"><a href="https://balloonsoverletchworth.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Balloons%20Over%20Letchworth%2C%20Castile%20NY" target="_blank" rel="noopener">Map</a></p>
+</article>
+<article class="card wide">
+<div class="photo ph-fallback" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5c3.5 2 6.5 6 5.5 11.5-1 4.5-3.5 6.5-5.5 7.5-2-1-4.5-3-5.5-7.5C5.5 7.5 8.5 3.5 12 1.5zm0 3.2v14.8"/></svg></div>
+<h4>Arcade &amp; Attica foliage steam train</h4><p class="meta">Arcade, 1 hr 15</p><p>Vintage steam excursions through Oct 21, $29. Mostly sold out for this weekend; a few seats were left on Sunday&#x27;s 4:15. Medina&#x27;s foliage train is not running this year.</p><p class="links"><a href="https://www.aarailroad.com/train-rides/fall-foliage/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Arcade%20%26%20Attica%20Railroad%2C%20Arcade%20NY" target="_blank" rel="noopener">Map</a></p>
+</article>
+</div>
+</section>
+<section id="rain"><h2>Rainy day</h2><p class="lead">If a day turns wet, these all keep you dry. Cold is fine for everything else; only the chairlift and the gorge trails really need a dry day.</p>
+<ul class="rows">
+<li class="row">
+<div class="thumb"><img src="https://www.museumofplay.org/app/uploads/2024/03/Strong-Museum-drone-700.jpg" alt="The Strong Museum of Play" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>The Strong Museum of Play</h4><p class="meta">Sat 10 to 8, Sun and Mon 10 to 5, from $25</p><p>Pinball hall, Video Game Hall of Fame, a 20-foot playable Donkey Kong.</p><p class="links"><a href="https://www.museumofplay.org/" target="_blank" rel="noopener">Website</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://www.eastman.org/sites/default/files/1992GEHFacade-web.jpg" alt="George Eastman Museum" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>George Eastman Museum</h4><p class="meta">Sat 10 to 5, Sun 11 to 5, closed Mon, $23</p><p>The Kodak founder&#x27;s mansion and the world&#x27;s oldest photo museum.</p><p class="links"><a href="https://www.eastman.org/" target="_blank" rel="noopener">Website</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Memorial_Art_Gallery_main_gallery_west_side.JPG/960px-Memorial_Art_Gallery_main_gallery_west_side.JPG" alt="Memorial Art Gallery" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Memorial_Art_Gallery_main_gallery_west_side.JPG" target="_blank" rel="noopener">Wikimedia</a></div>
+<div><h4>Memorial Art Gallery</h4><p class="meta">Sat and Sun 11 to 5, closed Mon, $20</p><p>A serious collection in a beautiful building; the sculpture park is free.</p><p class="links"><a href="https://mag.rochester.edu/" target="_blank" rel="noopener">Website</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Rochester_Museum_%26_Science_Center%2C_NY.jpg/960px-Rochester_Museum_%26_Science_Center%2C_NY.jpg" alt="Rochester Museum &amp; Science Center" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Rochester_Museum_%26_Science_Center%2C_NY.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<div><h4>Rochester Museum &amp; Science Center</h4><p class="meta">Sat 9 to 5, Sun 11 to 5, closed Mon, $23</p><p>Planetarium, and an 18+ After Dark party Saturday 7 to 10 ($25).</p><p class="links"><a href="https://rmsc.org/" target="_blank" rel="noopener">Website</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://susanb.org/wp-content/uploads/2025/03/Susan-B-Anthony-House_7-17-24smaller-1024x576.jpg" alt="Susan B. Anthony Museum &amp; House" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Susan B. Anthony Museum &amp; House</h4><p class="meta">Sat and Sun 11 to 5, closed Mon, $20</p><p>Guided tour of the house where she was arrested for voting in 1872.</p><p class="links"><a href="https://susanb.org/" target="_blank" rel="noopener">Website</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/High_Falls_Terrace_Park%2C_Rochester_NY_June_2025.jpg/960px-High_Falls_Terrace_Park%2C_Rochester_NY_June_2025.jpg" alt="Genesee Brew House" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:High_Falls_Terrace_Park%2C_Rochester_NY_June_2025.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<div><h4>Genesee Brew House</h4><p class="meta">Daily 11 to 10</p><p>Beer museum, pilot brewery, lunch over the falls. The rainy-day default.</p><p class="links"><a href="https://www.geneseebeer.com/brewhouse/" target="_blank" rel="noopener">Website</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://images.squarespace-cdn.com/content/v1/553459d5e4b0f20e2b6084cd/1513779746730-2F6S1U1JIM1FWSG2J64G/Playhouse20171206DSC_1658.jpg" alt="Swillburger / The Playhouse" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Swillburger / The Playhouse</h4><p class="meta">Sat and Sun from 11:30, closed Mon</p><p>Arcade bar in a converted church: smash burgers and vintage cabinets.</p><p class="links"><a href="https://www.theplayhouseroc.com/" target="_blank" rel="noopener">Website</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://radio-social.com/wp-content/uploads/2020/08/bowling-alley1.jpg" alt="Radio Social" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"></div>
+<div><h4>Radio Social</h4><p class="meta">Sat 3 to midnight, Sun brunch, closed Mon</p><p>Bowling, bocce and cocktails in an old radio factory, 10 min from home.</p><p class="links"><a href="https://radio-social.com/" target="_blank" rel="noopener">Website</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Seneca_Park_Zoo_Entrance.jpg/960px-Seneca_Park_Zoo_Entrance.jpg" alt="Seneca Park Zoo" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Seneca_Park_Zoo_Entrance.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
+<div><h4>Seneca Park Zoo</h4><p class="meta">Daily 10 to 5, $16</p><p>Mostly outdoors, but the new tropics building and the Olmsted park are a good hour.</p><p class="links"><a href="https://senecaparkzoo.org/" target="_blank" rel="noopener">Website</a></p></div>
+</li>
+<li class="row">
+<div class="thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Corning_Museum_of_Glass_Exterior.JPG/960px-Corning_Museum_of_Glass_Exterior.JPG" alt="Corning Museum of Glass" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Corning_Museum_of_Glass_Exterior.JPG" target="_blank" rel="noopener">Wikimedia</a></div>
+<div><h4>Corning Museum of Glass</h4><p class="meta">Daily 9 to 5, $25, 2 hrs away</p><p>The best wet-day road trip in the state. See Epic.</p><p class="links"><a href="https://home.cmog.org/" target="_blank" rel="noopener">Website</a></p></div>
+</li>
+</ul>
+</section>
+<section id="know"><h2>Good to know</h2>
+<h3>Booked or booking</h3><ul class="todo">
+<li>Bristol Mountain chairlift, Sunday afternoon ($15 if booked three days ahead)</li>
+<li>Glen Iris Inn lunch at Letchworth, Monday 11:30</li>
+<li>Capitano dinner, Sunday evening</li>
+<li>Saturday dinner (Hedges, Lento or Good Luck)</li>
+<li>Optional: Peels on Wheels pizza pre-order for Saturday night</li>
+<li>Optional: RPO Aretha Franklin night or Spirits of the Past for Saturday</li>
+</ul>
+<details><summary>Closed on Monday</summary><p>George Eastman Museum, Memorial Art Gallery, Public Market, Mad Hatter, Peels on Wheels, Swan Market, Lento, Good Luck, Hedges, Swillburger, Radio Social, Blue Barn, Hurd Orchards, Other Half Canandaigua, Parkleigh, the Charlotte lighthouse tours and Cave of the Winds at Niagara.</p><p>Open Monday: The Strong, Genesee Brew House, Jines, Village Bakery, FairPour, Stever's, Highland Park Diner, Dinosaur, Capitano, Redd, Black & Blue, Dogtown, Schutt's, Embark, Letchworth (free), Sonnenberg, and every Naples and Keuka winery listed.</p></details>
+<details><summary>Rochester in one minute</summary><p>Rochester grew up on the Genesee River waterfalls: flour mills first (the Flour City), then nurseries and lilacs (the Flower City), then Kodak, Xerox and Bausch & Lomb (the World's Image Centre). George Eastman invented roll film here and gave the city its music school, museum and parks. Susan B. Anthony and Frederick Douglass lived and are buried here. The Erie Canal made it America's first boomtown in 1825. Wegmans started here in 1916. And yes, the garbage plate is a real thing, born at Nick Tahou's in 1918.</p></details>
+<details><summary>A few heads-ups</summary><p>The Irondequoit Bay outlet bridge is swung open for boats until Nov 1, so no shortcut to Webster. Seabreeze and the beach carousel are closed for the season. Letchworth's weekend gates close when the lots fill, which is why we go Monday. Niagara's Cave of the Winds is closed Oct 19 and 20. Abbott's on the lake is at the end of its season; call first. A few photos here are hot-linked from the businesses' own sites and Wikimedia Commons and may change.</p></details>
+</section>
+<footer class="foot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5c3.5 2 6.5 6 5.5 11.5-1 4.5-3.5 6.5-5.5 7.5-2-1-4.5-3-5.5-7.5C5.5 7.5 8.5 3.5 12 1.5zm0 3.2v14.8"/></svg><p>Made with love at 640 Culver Pkwy. See you Saturday.</p><p>Photos from the businesses' websites and <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Wikimedia Commons</a> (credit links on each). Hours checked Oct 12, 2026; always confirm before driving out.</p></footer>
+</div>
+<script>
+(function(){
+  var c=document.getElementById('leaves');if(!c)return;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var ctx=c.getContext('2d'),W,H,dpr=Math.min(devicePixelRatio||1,1.5),leaves=[];
+  var colors=['#B8431C','#D9741F','#E3A235','#8E1B16','#C95A2B','#6E7A3A'];
+  function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;c.style.width=W+'px';c.style.height=H+'px';ctx.setTransform(dpr,0,0,dpr,0,0)}
+  size();addEventListener('resize',size);
+  var N=W<600?12:22;
+  function mk(top){return{x:Math.random()*W,y:top?-30:Math.random()*H,s:9+Math.random()*9,r:Math.random()*6.28,vr:(Math.random()-.5)*.03,vy:.5+Math.random()*.9,sw:Math.random()*6.28,swa:.6+Math.random()*1.2,c:colors[Math.random()*colors.length|0],o:.38+Math.random()*.25}}
+  for(var i=0;i<N;i++)leaves.push(mk(false));
+  var p=new Path2D('M0 -11 C 5 -8 9 -2 8 5 C 7 9 3 11 0 13 C -3 11 -7 9 -8 5 C -9 -2 -5 -8 0 -11 Z');var stem=new Path2D('M0 -6 L0 13');
+  var last=0;
+  function draw(t){
+    var dt=Math.min(32,t-last)/16;last=t;ctx.clearRect(0,0,W,H);
+    for(var i=0;i<leaves.length;i++){var l=leaves[i];
+      l.y+=l.vy*dt;l.sw+=.02*dt;l.x+=Math.sin(l.sw)*l.swa*.4*dt;l.r+=l.vr*dt;
+      if(l.y>H+30||l.x<-40||l.x>W+40)leaves[i]=l=mk(true);
+      ctx.save();ctx.translate(l.x,l.y);ctx.rotate(l.r);ctx.scale(l.s/10,l.s/10);
+      ctx.globalAlpha=l.o;ctx.fillStyle=l.c;ctx.fill(p);ctx.strokeStyle='rgba(60,25,10,.35)';ctx.lineWidth=1.2;ctx.stroke(stem);ctx.restore();}
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+})();
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.nav a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+  function upd(){var y=scrollY+120,idx=0;secs.forEach(function(s,i){if(s&&s.offsetTop<=y)idx=i});
+    links.forEach(function(a,i){a.classList.toggle('active',i===idx)});
+    var act=links[idx];if(act&&act.scrollIntoView)act.scrollIntoView({block:'nearest',inline:'center'})}
+  addEventListener('scroll',upd,{passive:true});upd();
+})();
+</script></body></html>
