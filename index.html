@@ -1187,9 +1187,11 @@ details[open] summary::after{content:"\2212"}
 (function(){
   var links=[].slice.call(document.querySelectorAll('.nav a'));
   var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
-  function upd(){var y=scrollY+120,idx=0;secs.forEach(function(s,i){if(s&&s.offsetTop<=y)idx=i});
+  var ul=document.querySelector('.nav ul'),cur=-1,ticking=false;
+  function upd(){ticking=false;var y=scrollY+120,idx=0;secs.forEach(function(s,i){if(s&&s.offsetTop<=y)idx=i});
+    if(idx===cur)return;cur=idx;
     links.forEach(function(a,i){a.classList.toggle('active',i===idx)});
-    var act=links[idx];if(act&&act.scrollIntoView)act.scrollIntoView({block:'nearest',inline:'center'})}
-  addEventListener('scroll',upd,{passive:true});upd();
+    var act=links[idx];if(act&&ul){var left=act.offsetLeft-(ul.clientWidth-act.offsetWidth)/2;ul.scrollTo({left:Math.max(0,left),behavior:'smooth'})}}
+  addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(upd)}},{passive:true});upd();
 })();
 </script></body></html>
