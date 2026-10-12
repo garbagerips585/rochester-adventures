@@ -180,6 +180,8 @@ details[open] summary::after{content:"\2212"}
 :focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 
 .deco{position:absolute;pointer-events:none}
+.ph-fallback .emo{font-size:46px;filter:drop-shadow(0 3px 6px rgba(90,40,10,.25))}
+.thumb.ph-fallback .emo{font-size:36px}
 .emo{display:inline-block;line-height:1;font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif;font-style:normal}
 .hero .leaf-mark{display:inline-block;margin-bottom:.8rem;filter:drop-shadow(0 4px 10px rgba(0,0,0,.3))}
 .pile text{font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif}
@@ -536,7 +538,7 @@ details[open] summary::after{content:"\2212"}
 <li class="stop">
 <div class="when">Morning</div>
 <div class="card">
-<div class="photo ph-fallback" aria-hidden="true"><span class="emo " style="font-size:44px;transform:rotate(0deg)" aria-hidden="true">🍁</span></div>
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Mount_Morris_Dam.JPG/960px-Mount_Morris_Dam.JPG" alt="Mt. Morris Dam overlook" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Mount_Morris_Dam.JPG" target="_blank" rel="noopener">Wikimedia</a></div>
 <h4>Mt. Morris Dam overlook</h4>
 <p>The free north-end view above the deepest part of the gorge. Enter the park at Mt. Morris and drive the park road south so the overlooks come in order: Great Bend, Archery Field, Wolf Creek.</p>
 <p class="best"><span class="emo " style="font-size:14px;transform:rotate(0deg)" aria-hidden="true">🍁</span> Early; the whole park is empty on a Monday morning.</p>
@@ -605,7 +607,7 @@ details[open] summary::after{content:"\2212"}
 <li class="stop">
 <div class="when">Evening</div>
 <div class="card">
-<div class="photo ph-fallback" aria-hidden="true"><span class="emo " style="font-size:44px;transform:rotate(0deg)" aria-hidden="true">🍁</span></div>
+<div class="photo ph-fallback" aria-hidden="true"><span class="emo">🍽️</span></div>
 <h4>Dinner: Redd</h4>
 <p>Rochester&#x27;s only pick on USA Today&#x27;s Restaurants of the Year (Mon 5 to 10). Capitano if you saved it, Black &amp; Blue, or Dogtown for a garbage-plate send-off.</p>
 <p class="links"><a href="https://reddrochester.com/" target="_blank" rel="noopener">Website</a> <a href="https://reddrochester.com/menus/" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Redd%2C%2024%20Winthrop%20St%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p>
@@ -674,7 +676,7 @@ details[open] summary::after{content:"\2212"}
 <p class="links"><a href="https://garrettchapel.org/" target="_blank" rel="noopener">Details</a></p>
 </article>
 <article class="tile">
-<div class="photo tile-photo ph-fallback" aria-hidden="true"><span class="emo " style="font-size:44px;transform:rotate(0deg)" aria-hidden="true">🍁</span></div>
+<div class="photo tile-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Skaneateles_Lake_seen_from_the_village_of_Skaneateles%2C_Onondaga_County%2C_New_York.jpg/960px-Skaneateles_Lake_seen_from_the_village_of_Skaneateles%2C_Onondaga_County%2C_New_York.jpg" alt="Skaneateles" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Skaneateles_Lake_seen_from_the_village_of_Skaneateles%2C_Onondaga_County%2C_New_York.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
 <h4>Skaneateles</h4><p class="meta">90 min</p><p>Prettiest village in the Finger Lakes; drive both shores, lunch at Doug&#x27;s Fish Fry.</p>
 <p class="links"><a href="https://www.skaneateles.com/" target="_blank" rel="noopener">Details</a></p>
 </article>
@@ -811,7 +813,7 @@ details[open] summary::after{content:"\2212"}
 <div><h4>Ristorante Lucano</h4><p class="meta">1815 East Ave</p><p>Classic Italian. Saturday from 5</p><p class="links"><a href="https://lucanoroc.com/" target="_blank" rel="noopener">Website</a> <a href="https://lucanoroc.com/menu" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Ristorante%20Lucano%2C%201815%20East%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
 </li>
 <li class="row">
-<div class="thumb ph-fallback" aria-hidden="true"><span class="emo " style="font-size:44px;transform:rotate(0deg)" aria-hidden="true">🍁</span></div>
+<div class="thumb ph-fallback" aria-hidden="true"><span class="emo">🍽️</span></div>
 <div><h4>Redd</h4><p class="meta">24 Winthrop St</p><p>New American, USA Today Restaurants of the Year. Sat and Mon 5 to 10, closed Sun</p><p class="links"><a href="https://reddrochester.com/" target="_blank" rel="noopener">Website</a> <a href="https://reddrochester.com/menus/" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Redd%2C%2024%20Winthrop%20St%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
 </li>
 <li class="row">
@@ -915,11 +917,11 @@ details[open] summary::after{content:"\2212"}
 <div><h4>Peppermint at the Culver Road Armory</h4><p class="meta">145 Culver Rd</p><p>Call ahead, 585-532-8132. Designer Tanvi Asher&#x27;s vintage-inspired clothing plus a wall of Rochester-made gifts, next to Village Bakery.</p><p class="links"><a href="https://shop-peppermint.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Culver%20Road%20Armory%2C%20145%20Culver%20Rd%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
 </li>
 <li class="row">
-<div class="thumb ph-fallback" aria-hidden="true"><span class="emo " style="font-size:44px;transform:rotate(0deg)" aria-hidden="true">🍁</span></div>
+<div class="thumb ph-fallback" aria-hidden="true"><span class="emo">🛍️</span></div>
 <div><h4>Archimage</h4><p class="meta">668 Monroe Ave</p><p>Roughly Sat 11 to 7, Sun 12 to 5. Family-owned since 1983: clothing, toys, incense, cards, a treasure chest.</p><p class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Archimage%2C%20668%20Monroe%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
 </li>
 <li class="row">
-<div class="thumb ph-fallback" aria-hidden="true"><span class="emo " style="font-size:44px;transform:rotate(0deg)" aria-hidden="true">🍁</span></div>
+<div class="thumb ph-fallback" aria-hidden="true"><span class="emo">📚</span></div>
 <div><h4>Greenwood Books</h4><p class="meta">123 East Ave</p><p>Saturday 11 to 6 only. A scholarly used and rare bookshop that feels like a library you can buy from.</p><p class="links"><a href="https://www.greenwoodbookstore.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Greenwood%20Books%2C%20123%20East%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
 </li>
 <li class="row">
@@ -935,7 +937,7 @@ details[open] summary::after{content:"\2212"}
 <div><h4>Rochester Public Market</h4><p class="meta">280 N Union St</p><p>Saturday 5 to 3 only. 300+ vendors since 1905, voted America&#x27;s favorite farmers market; Public Provisions (the old Flour City Bread) is inside.</p><p class="links"><a href="https://www.cityofrochester.gov/publicmarket" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Rochester%20Public%20Market%2C%20280%20N%20Union%20St%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
 </li>
 <li class="row">
-<div class="thumb ph-fallback" aria-hidden="true"><span class="emo " style="font-size:44px;transform:rotate(0deg)" aria-hidden="true">🍁</span></div>
+<div class="thumb ph-fallback" aria-hidden="true"><span class="emo">🥬</span></div>
 <div><h4>Abundance Food Co-op</h4><p class="meta">571 South Ave</p><p>Daily 8 to 9. The community-owned grocery in a converted garage; local products and a hot bar.</p><p class="links"><a href="https://abundance.coop/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Abundance%20Food%20Co-op%2C%20571%20South%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
 </li>
 <li class="row">
@@ -970,7 +972,7 @@ details[open] summary::after{content:"\2212"}
 <div><h4>Savoia Pastry Shoppe</h4><p class="meta">2267 Clifford Ave, 5 minutes away</p><p>Sat 9 to 4:30, Sun 9 to 2, Mon 8 to 5. Italian pastry since 1935: cannoli, sfogliatelle, cookie trays.</p><p class="links"><a href="https://www.savoiapastry.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Savoia%20Pastry%20Shoppe%2C%202267%20Clifford%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
 </li>
 <li class="row">
-<div class="thumb ph-fallback" aria-hidden="true"><span class="emo " style="font-size:44px;transform:rotate(0deg)" aria-hidden="true">🍁</span></div>
+<div class="thumb ph-fallback" aria-hidden="true"><span class="emo">🍩</span></div>
 <div><h4>Ridge Donut Cafe</h4><p class="meta">1600 Portland Ave</p><p>Sat 6 to 4, Sun 6 to 1, Mon 6 to 4. No-frills since 1976; hand-cut cake donuts and fritters sell out by mid-morning.</p><p class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Ridge%20Donut%20Cafe%2C%201600%20Portland%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
 </li>
 <li class="row">
@@ -978,11 +980,11 @@ details[open] summary::after{content:"\2212"}
 <div><h4>Village Bakery &amp; Cafe</h4><p class="meta">145 Culver Rd at Park Ave</p><p>Daily from 6:30. Wood-fired breads, pastries and brunch; the easy one.</p><p class="links"><a href="https://villagebakeries.com/" target="_blank" rel="noopener">Website</a> <a href="https://villagebakeries.com/menus/" target="_blank" rel="noopener">Menu</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Village%20Bakery%20%26%20Cafe%2C%20145%20Culver%20Rd%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
 </li>
 <li class="row">
-<div class="thumb ph-fallback" aria-hidden="true"><span class="emo " style="font-size:44px;transform:rotate(0deg)" aria-hidden="true">🍁</span></div>
+<div class="thumb ph-fallback" aria-hidden="true"><span class="emo">🥐</span></div>
 <div><h4>Baker Street Bakery</h4><p class="meta">745 Park Ave</p><p>Saturday 8 to 3 only. Pies, scones and fruit tarts a few doors from Stever&#x27;s.</p><p class="links"><a href="https://bakerstbakery.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Baker%20Street%20Bakery%2C%20745%20Park%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
 </li>
 <li class="row">
-<div class="thumb ph-fallback" aria-hidden="true"><span class="emo " style="font-size:44px;transform:rotate(0deg)" aria-hidden="true">🍁</span></div>
+<div class="thumb ph-fallback" aria-hidden="true"><span class="emo">🎂</span></div>
 <div><h4>Scratch Bakeshop</h4><p class="meta">41 Russell St, off Park Ave</p><p>Saturday 10 to 3 only. Tiny shop, serious layer cakes and cookies.</p><p class="links"><a href="http://www.scratchbakeshoproc.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Scratch%20Bakeshop%2C%2041%20Russell%20St%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
 </li>
 <li class="row">
@@ -990,11 +992,11 @@ details[open] summary::after{content:"\2212"}
 <div><h4>Cheesy Eddie&#x27;s</h4><p class="meta">602 South Ave</p><p>Saturday 9 to 3 only. The South Wedge cheesecake institution since 1976; the carrot cake is the sleeper.</p><p class="links"><a href="https://shopcheesyeddies.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Cheesy%20Eddie%27s%2C%20602%20South%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
 </li>
 <li class="row">
-<div class="thumb ph-fallback" aria-hidden="true"><span class="emo " style="font-size:44px;transform:rotate(0deg)" aria-hidden="true">🍁</span></div>
+<div class="thumb ph-fallback" aria-hidden="true"><span class="emo">🥖</span></div>
 <div><h4>Public Provisions at the Public Market</h4><p class="meta">45 Public Market</p><p>Sat 7 to 3, Sun brunch 10 to 2. Flour City Bread&#x27;s naturally leavened loaves live on here.</p><p class="links"><a href="https://www.public-provisions.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Public%20Provisions%2C%2045%20Public%20Market%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
 </li>
 <li class="row">
-<div class="thumb ph-fallback" aria-hidden="true"><span class="emo " style="font-size:44px;transform:rotate(0deg)" aria-hidden="true">🍁</span></div>
+<div class="thumb ph-fallback" aria-hidden="true"><span class="emo">🥐</span></div>
 <div><h4>Leo&#x27;s Bakery &amp; Deli</h4><p class="meta">101 Despatch Dr, East Rochester</p><p>Sat 9 to 7, Sun 9 to 6, Mon 9 to 7. Italian bakery-deli famous for cannoli and cookies.</p><p class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Leo%27s%20Bakery%2C%20101%20Despatch%20Dr%2C%20East%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
 </li>
 <li class="row">
@@ -1021,11 +1023,11 @@ details[open] summary::after{content:"\2212"}
 <div><h4>FairPour Coffee Roasters</h4><p class="meta">42 Adventure Pl, by the Strong</p><p>Daily 8 to 4. Our coffee.</p><p class="links"><a href="https://www.fairpour.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=FairPour%20Coffee%20Roasters%2C%2042%20Adventure%20Pl%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
 </li>
 <li class="row">
-<div class="thumb ph-fallback" aria-hidden="true"><span class="emo " style="font-size:44px;transform:rotate(0deg)" aria-hidden="true">🍁</span></div>
+<div class="thumb ph-fallback" aria-hidden="true"><span class="emo">☕</span></div>
 <div><h4>Ugly Duck Coffee</h4><p class="meta">89 Charlotte St, East End</p><p>Sat and Sun 8 to 5, Mon 7 to 5. Minimalist multi-roaster cafe in a renovated garage.</p><p class="links"><a href="https://www.uglyduckcoffee.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Ugly%20Duck%20Coffee%2C%2089%20Charlotte%20St%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
 </li>
 <li class="row">
-<div class="thumb ph-fallback" aria-hidden="true"><span class="emo " style="font-size:44px;transform:rotate(0deg)" aria-hidden="true">🍁</span></div>
+<div class="thumb ph-fallback" aria-hidden="true"><span class="emo">☕</span></div>
 <div><h4>Melo Coffee &amp; Kitchen</h4><p class="meta">696 University Ave</p><p>Sat 8 to 5, Sun 8 to 2, Mon 8 to 5. Bright brunch cafe in the Neighborhood of the Arts.</p><p class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Melo%20Coffee%2C%20696%20University%20Ave%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
 </li>
 <li class="row">
@@ -1033,7 +1035,7 @@ details[open] summary::after{content:"\2212"}
 <div><h4>Glen Edith Coffee Roasters</h4><p class="meta">23 Somerton St, off Park Ave</p><p>Rochester roaster known for pour-overs; several cafes around town.</p><p class="links"><a href="https://www.glenedithcoffee.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Glen%20Edith%20Coffee%2C%2023%20Somerton%20St%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
 </li>
 <li class="row">
-<div class="thumb ph-fallback" aria-hidden="true"><span class="emo " style="font-size:44px;transform:rotate(0deg)" aria-hidden="true">🍁</span></div>
+<div class="thumb ph-fallback" aria-hidden="true"><span class="emo">☕</span></div>
 <div><h4>Fuego Coffee Roasters</h4><p class="meta">1 Woodbury Blvd, downtown</p><p>Daily 7 to 5. Cult espresso by Geva Theatre.</p><p class="links"><a href="https://fuegocoffee.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Fuego%20Coffee%2C%201%20Woodbury%20Blvd%2C%20Rochester%20NY" target="_blank" rel="noopener">Map</a></p></div>
 </li>
 </ul>
@@ -1065,7 +1067,7 @@ details[open] summary::after{content:"\2212"}
 <h4>Hot-air balloon over Letchworth</h4><p class="meta">Sunrise or sunset</p><p>Balloons Over Letchworth floats over the gorge at peak color, about an hour aloft, $445 a person, weather permitting. October weekends are nearly full; weekdays have space. The truly epic version of Monday.</p><p class="links"><a href="https://balloonsoverletchworth.com/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Balloons%20Over%20Letchworth%2C%20Castile%20NY" target="_blank" rel="noopener">Map</a></p>
 </article>
 <article class="card wide">
-<div class="photo ph-fallback" aria-hidden="true"><span class="emo " style="font-size:44px;transform:rotate(0deg)" aria-hidden="true">🍁</span></div>
+<div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Arcade_%26_Attica_steam_locomotive_1.jpg/960px-Arcade_%26_Attica_steam_locomotive_1.jpg" alt="Arcade &amp; Attica foliage steam train" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Arcade_%26_Attica_steam_locomotive_1.jpg" target="_blank" rel="noopener">Wikimedia</a></div>
 <h4>Arcade &amp; Attica foliage steam train</h4><p class="meta">Arcade, 1 hr 15</p><p>Vintage steam excursions through Oct 21, $29. Mostly sold out for this weekend; a few seats were left on Sunday&#x27;s 4:15. Medina&#x27;s foliage train is not running this year.</p><p class="links"><a href="https://www.aarailroad.com/train-rides/fall-foliage/" target="_blank" rel="noopener">Website</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Arcade%20%26%20Attica%20Railroad%2C%20Arcade%20NY" target="_blank" rel="noopener">Map</a></p>
 </article>
 </div>
@@ -1116,8 +1118,8 @@ details[open] summary::after{content:"\2212"}
 </section>
 <section id="history"><div class="sectionhead"><span class="emo " style="font-size:35px" aria-hidden="true">🎃</span><h2>Rochester history and fun facts</h2></div>
 <p class="lead">Things to know so you can nod along when we point at buildings.</p><div class="facts">
-<article class="fact"><div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/The_upper_falls_of_the_Genesee_at_Rochester%2C_N.Y.%2C_from_the_east_bank_LCCN2003673915.jpg/960px-The_upper_falls_of_the_Genesee_at_Rochester%2C_N.Y.%2C_from_the_east_bank_LCCN2003673915.jpg" alt="Flour City, Flower City, Image City" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:The_upper_falls_of_the_Genesee_at_Rochester%2C_N.Y.%2C_from_the_east_bank_LCCN2003673915.jpg" target="_blank" rel="noopener">Wikimedia</a></div><div class="body"><h4>Flour City, Flower City, Image City</h4><p>By the 1830s, 21 flour mills at the falls made Rochester the biggest flour producer in the country and America&#x27;s first boomtown. When the mills moved west, the Ellwanger &amp; Barry nurseries made it the Flower City. Kodak, Xerox and Bausch &amp; Lomb made it the World&#x27;s Image Centre.</p></div></article>
-<article class="fact"><div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Erie_Canal_-_Second_Genesee_Aqueduct_%28aka_Broad_Street_Bridge%29.jpg/960px-Erie_Canal_-_Second_Genesee_Aqueduct_%28aka_Broad_Street_Bridge%29.jpg" alt="The Erie Canal built the town" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Erie_Canal_-_Second_Genesee_Aqueduct_%28aka_Broad_Street_Bridge%29.jpg" target="_blank" rel="noopener">Wikimedia</a></div><div class="body"><h4>The Erie Canal built the town</h4><p>The canal reached Rochester in 1823 and crossed the river on a stone aqueduct. The 1842 aqueduct is still there: it&#x27;s the Broad Street Bridge downtown, and the old canal bed under it carried a subway from 1927 to 1956.</p></div></article>
+<article class="fact"><div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Genesee_River_as_it_flows_through_a_race_at_High_Falls.jpg/960px-Genesee_River_as_it_flows_through_a_race_at_High_Falls.jpg" alt="Flour City, Flower City, Image City" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Genesee_River_as_it_flows_through_a_race_at_High_Falls.jpg" target="_blank" rel="noopener">Wikimedia</a></div><div class="body"><h4>Flour City, Flower City, Image City</h4><p>By the 1830s, 21 flour mills at the falls made Rochester the biggest flour producer in the country and America&#x27;s first boomtown. When the mills moved west, the Ellwanger &amp; Barry nurseries made it the Flower City. Kodak, Xerox and Bausch &amp; Lomb made it the World&#x27;s Image Centre.</p></div></article>
+<article class="fact"><div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Broad_Street_Aqueduct_in_Rochester%2C_NY.jpg/960px-Broad_Street_Aqueduct_in_Rochester%2C_NY.jpg" alt="The Erie Canal built the town" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Broad_Street_Aqueduct_in_Rochester%2C_NY.jpg" target="_blank" rel="noopener">Wikimedia</a></div><div class="body"><h4>The Erie Canal built the town</h4><p>The canal reached Rochester in 1823 and crossed the river on a stone aqueduct. The 1842 aqueduct is still there: it&#x27;s the Broad Street Bridge downtown, and the old canal bed under it carried a subway from 1927 to 1956.</p></div></article>
 <article class="fact"><div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/George_Eastman_7.jpg/960px-George_Eastman_7.jpg" alt="George Eastman put a camera in every hand" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:George_Eastman_7.jpg" target="_blank" rel="noopener">Wikimedia</a></div><div class="body"><h4>George Eastman put a camera in every hand</h4><p>Roll film in 1884, the Kodak camera in 1888, the $1 Brownie in 1900. Eastman gave the city its music school, its theatre, its hospital and dental clinics, and a park with Durand.</p></div></article>
 <article class="fact"><div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Frederick_Douglass_by_Samuel_J_Miller%2C_1847-52.png/960px-Frederick_Douglass_by_Samuel_J_Miller%2C_1847-52.png" alt="Frederick Douglass printed The North Star here" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Frederick_Douglass_by_Samuel_J_Miller%2C_1847-52.png" target="_blank" rel="noopener">Wikimedia</a></div><div class="body"><h4>Frederick Douglass printed The North Star here</h4><p>Douglass lived in Rochester for 25 years and published his abolitionist paper from downtown starting in 1847. He&#x27;s buried in Mt. Hope Cemetery.</p></div></article>
 <article class="fact"><div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/SB_Anthony_from_RoRaWW.jpg/960px-SB_Anthony_from_RoRaWW.jpg" alt="Susan B. Anthony was arrested for voting" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:SB_Anthony_from_RoRaWW.jpg" target="_blank" rel="noopener">Wikimedia</a></div><div class="body"><h4>Susan B. Anthony was arrested for voting</h4><p>In November 1872 she cast a ballot in the presidential election and was arrested at her house on Madison St. The house is a museum; her grave in Mt. Hope gets covered in &#x27;I Voted&#x27; stickers every election day.</p></div></article>
