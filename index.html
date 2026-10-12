@@ -180,6 +180,33 @@ details[open] summary::after{content:"\2212"}
 :focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 
 .deco{position:absolute;pointer-events:none}
+.co{list-style:none;padding:0;margin:.6rem 0 0}
+.co li{display:grid;grid-template-columns:1fr auto;gap:.2rem .8rem;padding:.7rem 0;border-top:1px solid var(--line)}
+.co li:first-child{border-top:0}
+.co b{font-family:"Fraunces",serif;font-weight:600;font-size:1.08rem}
+.co .yr{font-family:"Fraunces",serif;color:var(--gold);font-size:1rem;font-weight:500}
+.co p{grid-column:1/-1;margin:0;font-size:.95rem;color:var(--ink)}
+.facts-list{margin:1.2rem 0 0;padding:0;list-style:none}
+.facts-list li{padding:.6rem 0 .6rem 1.4rem;border-top:1px solid var(--line);position:relative;font-size:.98rem}
+.facts-list li::before{content:"";position:absolute;left:.1rem;top:1.1rem;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.tx{list-style:none;padding:0;margin:.8rem 0 0;display:grid;gap:.8rem}
+.tx li{background:var(--card);border:1px solid rgba(142,90,43,.28);border-radius:12px;padding:.85rem 1rem}
+.tx b{font-family:"Fraunces",serif;font-weight:600;font-size:1.08rem;color:var(--maple);display:block;margin-bottom:.2rem}
+.tx p{margin:0;font-size:.97rem}
+@media (min-width:600px){.tx{grid-template-columns:1fr 1fr}.co{columns:2;column-gap:2.5rem}.co li{break-inside:avoid}}
+@media (min-width:1024px){.tx{grid-template-columns:repeat(3,1fr)}}
+/* favorites */
+.pick{position:absolute;top:.55rem;right:.55rem;z-index:2;width:34px;height:34px;border-radius:50%;border:1.5px solid rgba(142,90,43,.35);background:rgba(255,253,248,.92);color:var(--gold);font-size:1.15rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.pick.on{background:var(--gold);color:#fff;border-color:var(--gold)}
+.card,.tile,.row,.fact{position:relative}
+.row .pick{top:auto;bottom:.6rem;right:0;width:30px;height:30px;font-size:1rem}
+.pickbar{position:fixed;left:50%;bottom:1rem;transform:translateX(-50%);z-index:8;background:var(--maple);color:#fff;border-radius:999px;padding:.6rem .6rem .6rem 1rem;display:none;align-items:center;gap:.6rem;box-shadow:0 8px 24px rgba(43,26,18,.3);font-weight:700;max-width:calc(100% - 2rem)}
+.pickbar.show{display:flex}
+.pickbar span{white-space:nowrap;font-size:.9rem}
+body.haspicks{padding-bottom:5rem}
+.pickbar a,.pickbar button{background:var(--gold);color:var(--bark);border:0;border-radius:999px;padding:.45rem .8rem;font:700 .85rem "Nunito Sans",sans-serif;text-decoration:none;cursor:pointer;white-space:nowrap}
+.pickbar button.clear{background:transparent;color:#fff;padding:.45rem .4rem}
+.picks-note{font-size:.95rem;color:var(--ink);background:#FBEFD9;border-left:4px solid var(--gold);padding:.7rem .9rem;border-radius:0 10px 10px 0;margin:1rem 0 0}
 :root{--radius:12px}
 .hero{padding:3.6rem 1.25rem 3rem;border-bottom:3px solid var(--gold);background:
   radial-gradient(120% 90% at 0% 0%,#8E1B16 0%,rgba(142,27,22,0) 55%),
@@ -288,6 +315,8 @@ h2::after{content:"";display:block;width:3rem;height:2px;background:var(--gold);
 <li><a href="#shops">Shops & bakeries</a></li>
 <li><a href="#epic">Epic</a></li>
 <li><a href="#rain">Rainy day</a></li>
+<li><a href="#made">Made here</a></li>
+<li><a href="#texas">For Texans</a></li>
 <li><a href="#history">History</a></li>
 <li><a href="#know">Good to know</a></li>
 </ul></nav>
@@ -326,6 +355,8 @@ h2::after{content:"";display:block;width:3rem;height:2px;background:var(--gold);
 <a class="daycard" href="#mon"><div class="dn">Mon<small>Oct 19</small></div><div><h4>Letchworth State Park</h4><p>The gorge at peak, lunch at the Glen Iris Inn, cider donuts on the way home.</p><div class="mini"><span class="mi"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="13" fill="#F2A93B"/><g stroke="#F2A93B" stroke-width="4" stroke-linecap="round"><path d="M32 6v8M32 50v8M6 32h8M50 32h8M13.6 13.6l5.7 5.7M44.7 44.7l5.7 5.7M13.6 50.4l5.7-5.7M44.7 19.3l5.7-5.7"/></g></svg></span><span><b>64°</b><small>low 39°</small></span><span class="mi"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M6 44h52" stroke="#8E5A2B" stroke-width="4" stroke-linecap="round"/><path d="M18 44a14 14 0 0 1 28 0z" fill="#F2A93B"/><g stroke="#F2A93B" stroke-width="3.5" stroke-linecap="round"><path d="M32 14v6M14 36h4M46 36h4M19.3 23.3l3 3M44.7 23.3l-3 3"/></g><path d="M32 4l-6 7h12z" fill="#C8471B"/></svg></span><span><small>Rise</small><b>7:29</b></span><span class="mi"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M6 44h52" stroke="#8E5A2B" stroke-width="4" stroke-linecap="round"/><path d="M18 44a14 14 0 0 1 28 0z" fill="#E05A24"/><g stroke="#E05A24" stroke-width="3.5" stroke-linecap="round"><path d="M14 36h4M46 36h4M19.3 23.3l3 3M44.7 23.3l-3 3"/></g><path d="M32 18l6-7H26z" fill="#8E1B16"/></svg></span><span><small>Set</small><b>6:21</b></span></div></div></a>
 </div>
 <p class="meta" style="margin-top:.8rem">Forecast, sunrise and sunset are in each day below. Pack a warm coat for Saturday; the lake wind is real.</p>
+<div class="picks-note"><b>Build your own weekend:</b> tap the star on anything that sounds fun. Your picks collect in a bar at the bottom of the screen, and you can text them to Tim from there.</div>
+<div class="note"><b>Scott's work schedule</b>, so we can plan around it and include him as much as possible: Saturday 8 to 6, Sunday 5 am to 3 pm (opening), Monday 8 to 6. Evenings are all his.</div>
 </section>
 <section id="top10"><h2>Top 10 must-go</h2>
 <p class="lead">If you only do ten things, do these.</p><ol class="top10">
@@ -1137,6 +1168,27 @@ h2::after{content:"";display:block;width:3rem;height:2px;background:var(--gold);
 </li>
 </ul>
 </section>
+<section id="made"><h2>Made in Rochester</h2>
+<p class="lead">For a city of 200,000, Rochester has launched an absurd number of household names. Kodak, Xerox and Bausch + Lomb made it the World's Image Centre; the rest range from mustard to hoodies.</p>
+<h3>Still headquartered here</h3>
+<ul class="co"><li><b>Eastman Kodak</b><span class="yr">1888</span><p>George Eastman&#x27;s company put a camera in everyone&#x27;s hands; the $1 Brownie launched in 1900. Still headquartered in Kodak Tower on State St.</p></li><li><b>Wegmans</b><span class="yr">1916</span><p>Started as a produce cart; now the grocery store people cross state lines for. HQ in Gates, just west of the city.</p></li><li><b>Paychex</b><span class="yr">1971</span><p>Tom Golisano started it with $3,000; today it handles payroll for hundreds of thousands of businesses from Penfield.</p></li><li><b>Constellation Brands</b><span class="yr">1945</span><p>Born in Canandaigua as a small winery, now the company behind Corona and Modelo in the US. Moved its HQ into the old Aqueduct Building downtown in 2024.</p></li><li><b>Genesee Brewing</b><span class="yr">1878</span><p>Brewing above High Falls for nearly 150 years; Cream Ale since 1960. The Brew House is on the Saturday list.</p></li><li><b>Zweigle&#x27;s</b><span class="yr">1880</span><p>Inventor of the white hot (1925), the pale pork-and-veal sausage on every Rochester grill.</p></li><li><b>Abbott&#x27;s Frozen Custard</b><span class="yr">1902</span><p>The Charlotte beach stand opened in 1926. Founder Arthur Abbott&#x27;s racehorse won the 1952 Preakness.</p></li><li><b>DiBella&#x27;s</b><span class="yr">1918</span><p>An Italian grocery that became the sub shop; Wegmans asked them for advice when building its own sub counter.</p></li><li><b>Hickey Freeman</b><span class="yr">1899</span><p>Tailored suits for presidents from the North Clinton Ave factory for 124 years; the factory still sews under a new name.</p></li><li><b>Gleason Works</b><span class="yr">1865</span><p>The world leader in machines that cut bevel gears, still on University Ave.</p></li><li><b>Monro Inc.</b><span class="yr">1957</span><p>Monro Muffler Brake: the name is Monroe County minus the final e.</p></li><li><b>ESL Federal Credit Union</b><span class="yr">1920</span><p>Founded by George Eastman as Eastman Savings and Loan for Kodak employees.</p></li><li><b>Carestream Health</b><span class="yr">2007</span><p>Kodak&#x27;s medical imaging business, spun out and still based here.</p></li><li><b>Sutherland Global Services</b><span class="yr">1986</span><p>A 60,000-employee outsourcing company run from Pittsford.</p></li><li><b>LiDestri Foods</b><span class="yr">1974</span><p>Fairport sauce maker behind Francesco Rinaldi; descended from the Ragu family business.</p></li><li><b>Ward&#x27;s Science</b><span class="yr">1862</span><p>Supplied natural-history specimens to museums across the country; still in Rochester.</p></li><li><b>Salvatore&#x27;s Pizza</b><span class="yr">1978</span><p>Soccer Sam&#x27;s pink-box pizza chain, now running Donuts Delite a mile from our house.</p></li></ul>
+<h3>Born here, moved on</h3>
+<ul class="co"><li><b>Xerox</b><span class="yr">1906</span><p>Founded as the Haloid Photographic Co.; the 1959 Xerox 914 was the first plain-paper copier. HQ moved to Connecticut in 1969, but Webster is still a huge Xerox campus.</p></li><li><b>Bausch + Lomb</b><span class="yr">1853</span><p>Started as a Rochester optical shop; created Ray-Ban for pilots in 1937. Corporate HQ has moved, big operations remain.</p></li><li><b>Western Union</b><span class="yr">1851</span><p>Founded here as the New York &amp; Mississippi Valley Printing Telegraph Co.; built the first transcontinental telegraph in 1861.</p></li><li><b>French&#x27;s Mustard</b><span class="yr">1884</span><p>R.T. French set up shop in Rochester and debuted the yellow mustard at the 1904 World&#x27;s Fair. Left in 1987.</p></li><li><b>Ragu</b><span class="yr">1937</span><p>Giovanni and Assunta Cantisano sold sauce from their front porch; it grew into America&#x27;s pasta sauce.</p></li><li><b>Champion</b><span class="yr">1919</span><p>The Feinbloom family&#x27;s Knickerbocker Knitting Mills became Champion; credited with inventing the hoodie and Reverse Weave sweatshirts.</p></li><li><b>Gannett</b><span class="yr">1923</span><p>Frank Gannett&#x27;s newspaper company was incorporated here and launched USA Today in 1982 before moving to Virginia, then New York City.</p></li><li><b>Frontier Communications</b><span class="yr">1899</span><p>Began as Rochester Telephone, the city&#x27;s own phone company for nearly a century.</p></li><li><b>Stromberg-Carlson</b><span class="yr">1904</span><p>Telephone and radio maker that moved here from Chicago and ran WHAM radio.</p></li><li><b>Birds Eye / Curtice Burns</b><span class="yr">1868</span><p>Rochester was HQ to the frozen-food company until 2010; Comstock pie filling came from the apple country next door.</p></li><li><b>Hickok</b><span class="yr">1909</span><p>Belts and buckles, and the Hickok Belt, the top pro-athlete award from 1950 to 1971.</p></li></ul>
+<h3>In the neighborhood</h3>
+<ul class="co"><li><b>Jell-O</b><span class="yr">1897</span><p>Invented in Le Roy, 30 minutes southwest; there is a Jell-O museum.</p></li><li><b>Mott&#x27;s</b><span class="yr">1842</span><p>Founded in central New York, but the big applesauce plant is in Williamson, in the apple belt east of the house.</p></li><li><b>fairlife</b><span class="yr">2026</span><p>Coca-Cola&#x27;s milk brand just opened the largest dairy plant in the Northeast in Webster, 15 minutes away.</p></li><li><b>L3Harris</b><span class="yr">1961</span><p>The tactical radios used by militaries worldwide are made in Rochester; about 3,700 local jobs.</p></li><li><b>Corning</b><span class="yr">1851</span><p>Two hours south; the glass museum is on the Epic list.</p></li></ul>
+</section>
+<section id="texas"><h2>Rochester, explained for Texans</h2>
+<p class="lead">A field guide for two visitors from a very large state.</p><ul class="tx">
+<li><b>Size</b><p>Rochester metro: about 1.1 million. Houston metro: about 7.8 million. You will notice the lack of traffic.</p></li>
+<li><b>The lake</b><p>Lake America (formerly known as Lake Ontario) is 7,340 square miles, about 25 times Toledo Bend. It looks like the ocean because it basically is one, with freshwater.</p></li>
+<li><b>Snow</b><p>Rochester averages about 100 inches a year, among the most of any big city in the world. Dallas averages under 2. You are visiting at the perfect moment, before any of it.</p></li>
+<li><b>The grocery store</b><p>Wegmans is our H-E-B: family-owned since 1916, fiercely loved, and a legitimate tourist attraction. Please do not start a fight about which is better until after you have seen Pittsford.</p></li>
+<li><b>Barbecue</b><p>We know. Dinosaur is good, but we are not going to argue with Texas. Instead, try the things Texas does not have: the garbage plate, the white hot, sponge candy, cider donuts, grape pie.</p></li>
+<li><b>Football</b><p>Bills, not Cowboys. The Bills Mafia is a lifestyle; the game is Sunday at 4:25 and it will be on wherever we are.</p></li>
+<li><b>Fall</b><p>Texas has two seasons; we have the real one. Peak color is this weekend, the air is 45 degrees and smells like leaves and woodsmoke, and everyone is in flannel without irony.</p></li>
+<li><b>Hills</b><p>Rochester sits on a glacier-carved landscape: a 600-foot gorge at Letchworth, bluffs over the lake, eleven Finger Lakes. It will feel very un-flat.</p></li>
+<li><b>Friendliness</b><p>Rochester people will talk to you in line at Wegmans. You will feel right at home.</p></li>
+</ul></section>
 <section id="history"><h2>Rochester history and fun facts</h2>
 <p class="lead">Things to know so you can nod along when we point at buildings.</p><div class="facts">
 <article class="fact"><div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Genesee_River_as_it_flows_through_a_race_at_High_Falls.jpg/960px-Genesee_River_as_it_flows_through_a_race_at_High_Falls.jpg" alt="Flour City, Flower City, Image City" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:Genesee_River_as_it_flows_through_a_race_at_High_Falls.jpg" target="_blank" rel="noopener">Wikimedia</a></div><div class="body"><h4>Flour City, Flower City, Image City</h4><p>By the 1830s, 21 flour mills at the falls made Rochester the biggest flour producer in the country and America&#x27;s first boomtown. When the mills moved west, the Ellwanger &amp; Barry nurseries made it the Flower City. Kodak, Xerox and Bausch &amp; Lomb made it the World&#x27;s Image Centre.</p></div></article>
@@ -1155,7 +1207,22 @@ h2::after{content:"";display:block;width:3rem;height:2px;background:var(--gold);
 <article class="fact"><div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/WegmansTheFoodBarPittsfordNY.JPG/960px-WegmansTheFoodBarPittsfordNY.JPG" alt="Wegmans started as a produce cart" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:WegmansTheFoodBarPittsfordNY.JPG" target="_blank" rel="noopener">Wikimedia</a></div><div class="body"><h4>Wegmans started as a produce cart</h4><p>1916, in Rochester. The Pittsford store is the flagship and a legitimate tourist stop. Hickey Freeman has sewn suits on North Clinton since 1899, and Genesee has brewed above the falls since 1878.</p></div></article>
 <article class="fact"><div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/The_Breeze_Fast_Ferry_2004-08-08.JPG/960px-The_Breeze_Fast_Ferry_2004-08-08.JPG" alt="The fast ferry" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:The_Breeze_Fast_Ferry_2004-08-08.JPG" target="_blank" rel="noopener">Wikimedia</a></div><div class="body"><h4>The fast ferry</h4><p>In 2004 the city bought a giant catamaran to run to Toronto. It lost millions in two seasons and was sold to Venezuela. Rochesterians still bring it up. Do not ask about the ferry.</p></div></article>
 <article class="fact"><div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/RochesterNewYorkSkylineFromCobbsHillPark.JPG/960px-RochesterNewYorkSkylineFromCobbsHillPark.JPG" alt="The Genesee flows north" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('ph-fallback');this.remove()"><a class="credit" href="https://commons.wikimedia.org/wiki/File:RochesterNewYorkSkylineFromCobbsHillPark.JPG" target="_blank" rel="noopener">Wikimedia</a></div><div class="body"><h4>The Genesee flows north</h4><p>One of the few rivers in the US that does, from Pennsylvania through Letchworth and the city to Lake America (formerly known as Lake Ontario), dropping over three waterfalls inside the city limits. Rochester gets about 100 inches of snow a year; mid-October is the sweet spot.</p></div></article>
-</div></section>
+</div>
+<h3>More to know</h3><ul class="facts-list">
+<li>The Rochester Red Wings date to 1899, the oldest continuously operating sports franchise below the major leagues.</li>
+<li>RIT&#x27;s National Technical Institute for the Deaf is the world&#x27;s first and largest technological college for deaf and hard-of-hearing students.</li>
+<li>The University of Rochester is the region&#x27;s largest employer, with more than 30,000 people.</li>
+<li>Locals call it Smugtown, from a 1957 book of the same name. We have earned it.</li>
+<li>The Buffalo Bills held training camp at St. John Fisher in Pittsford from 2000 to 2019 and again since 2022, so this is Bills country.</li>
+<li>Thirteen statues of Frederick Douglass were placed around the city in 2018 for his 200th birthday; you will pass a few.</li>
+<li>In Susan B. Anthony Square there is a statue of Anthony and Douglass having tea together. They were real-life friends and neighbors.</li>
+<li>The Rochester Public Market was voted America&#x27;s Favorite Farmers Market in 2010.</li>
+<li>Rochester hosts a nine-day international jazz festival every June and the largest fringe festival in the state every September.</li>
+<li>Genesee Country Village &amp; Museum, 25 minutes southwest, is the largest living-history museum in New York, with 68 historic buildings.</li>
+<li>Lake America (formerly known as Lake Ontario) is the 13th largest lake in the world and has frozen over completely only five times since 1830.</li>
+<li>The Cobbs Hill reservoir on the skyline overlook was finished in 1908 and still holds the city&#x27;s drinking water.</li>
+<li>The airport code is ROC, which locals have turned into a verb, an adjective and a lifestyle.</li>
+</ul></section>
 <section id="know"><h2>Good to know</h2>
 <h3>Things we are booking</h3><ul class="todo">
 <li>Bristol Mountain chairlift, Sunday afternoon</li>
@@ -1168,6 +1235,7 @@ h2::after{content:"";display:block;width:3rem;height:2px;background:var(--gold);
 <details><summary>Closed on Monday</summary><p>George Eastman Museum, Memorial Art Gallery, Public Market, Mad Hatter, Peels on Wheels, Swan Market, Lento, Good Luck, Hedges, Swillburger, Radio Social, Blue Barn, Hurd Orchards, Other Half Canandaigua, Parkleigh, Hedonist, Artizanns, the Charlotte lighthouse tours and Cave of the Winds at Niagara.</p><p>Open Monday: The Strong, Genesee Brew House, Jines, Village Bakery, FairPour, Stever's, Highland Park Diner, Donuts Delite, Savoia, Dinosaur, Capitano, Redd, Black & Blue, Dogtown, Schutt's, Embark, Record Archive, Craft Company, Casa Larga, Letchworth (free), Sonnenberg, and every Naples and Keuka winery listed.</p></details>
 <details><summary>A few heads-ups</summary><p>The Irondequoit Bay outlet bridge is swung open for boats until Nov 1, so no shortcut to Webster. Seabreeze and the beach carousel are closed for the season. Letchworth's weekend gates close when the lots fill, which is why we lean Monday. Niagara's Cave of the Winds is closed Oct 19 and 20. Abbott's on the lake is at the end of its season; call first. Photos are linked from the businesses' own sites and Wikimedia Commons and may change.</p></details>
 </section>
+<div class="pickbar" id="pickbar"><span id="pickcount">0 picks</span><a id="picksms" href="#">Text Tim my picks</a><button type="button" id="pickcopy">Copy</button><button type="button" class="clear" id="pickclear" aria-label="Clear picks">✕</button></div>
 <div class="ornament foot-orn" aria-hidden="true"><span></span><i class="emo">🍁</i><span></span></div>
 <footer class="foot"><p>Made with love at 640 Culver Pkwy for Kristy and George. See you Saturday.</p><p>Photos from the businesses' websites and <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Wikimedia Commons</a> (credit links on each). Hours checked Oct 12, 2026; always confirm before driving out.</p></footer>
 </div>
@@ -1204,6 +1272,20 @@ h2::after{content:"";display:block;width:3rem;height:2px;background:var(--gold);
     requestAnimationFrame(draw);
   }
   requestAnimationFrame(draw);
+})();
+(function(){
+  var KEY='cotter-picks',picks=[];try{picks=JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(picks))}catch(e){}}
+  var bar=document.getElementById('pickbar'),cnt=document.getElementById('pickcount'),sms=document.getElementById('picksms');
+  function render(){var n=picks.length;bar.classList.toggle('show',n>0);document.body.classList.toggle('haspicks',n>0);cnt.textContent=n+(n===1?' pick':' picks');
+    var body='Our picks for the Rochester weekend:\n- '+picks.join('\n- ');sms.href='sms:?&body='+encodeURIComponent(body);
+    document.querySelectorAll('.pick').forEach(function(b){b.classList.toggle('on',picks.indexOf(b.dataset.name)>-1);b.textContent=picks.indexOf(b.dataset.name)>-1?'★':'☆'})}
+  var hosts=document.querySelectorAll('#top10 .card,#sat .card,#sun .card,#mon .card,#leaves-sec .tile,#food .row,#shops .row,#epic .card,#rain .row');
+  hosts.forEach(function(h){var t=h.querySelector('h4');if(!t)return;var name=t.childNodes[0].textContent.trim();var b=document.createElement('button');b.type='button';b.className='pick';b.dataset.name=name;b.setAttribute('aria-label','Add '+name+' to my picks');
+    b.addEventListener('click',function(ev){ev.preventDefault();var i=picks.indexOf(name);if(i>-1)picks.splice(i,1);else picks.push(name);save();render()});h.appendChild(b)});
+  document.getElementById('pickclear').addEventListener('click',function(){picks=[];save();render()});
+  document.getElementById('pickcopy').addEventListener('click',function(){var t='Our picks for the Rochester weekend:\n- '+picks.join('\n- ');if(navigator.clipboard)navigator.clipboard.writeText(t).then(function(){cnt.textContent='Copied!';setTimeout(render,1200)})});
+  render();
 })();
 (function(){
   var links=[].slice.call(document.querySelectorAll('.nav a'));
